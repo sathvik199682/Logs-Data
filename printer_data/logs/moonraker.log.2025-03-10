@@ -1,0 +1,1473 @@
+-------------------- Log Start | Sun Mar  9 18:49:00 2025 --------------------
+data_path: /home/om/printer_data
+is_default_data_path: False
+config_file: /home/om/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 3060fe1b3f574a95a5a343c6fc66396c
+unix_socket_path: /home/om/printer_data/comms/moonraker.sock
+software_version: v0.8.0-268-ga23187b
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/om/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = False
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[announcements]
+subscriptions = 
+	mainsail
+
+#################################################################
+All Configuration Files:
+/home/om/printer_data/config/moonraker.conf
+#################################################################
+
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 182
+
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: add5f1c6
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Plus Rev 1.4
+  total_memory: 880328
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SK32G
+  product_revision: 8.5
+  serial_number: 83e73685
+  manufacturer_date: 6/2024
+  capacity: 29.7 GiB
+  total_bytes: 31914983424
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['system.slice', 'network-online.target', 'sysinit.target']
+**After=['systemd-journald.socket', 'system.slice', 'network-online.target', 'sysinit.target', 'klipper.service', 'basic.target']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/om/printer_data/systemd/moonraker.env
+**ExecStart=/home/om/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=om
+
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['-.mount', 'sysinit.target', 'system.slice']
+**After=['-.mount', 'klipper-mcu.service', 'network-online.target', 'basic.target', 'system.slice', 'systemd-journald.socket', 'sysinit.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
+**ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/om/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=om
+Klipper Version: v0.12.0-85-gd785b396a-dirty
+2025-03-10 00:19:00,317 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:00,932 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:01,510 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:02,092 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:02,677 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:02,682 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:02,773 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:03,355 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:03,951 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:04,530 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:05,122 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:05,125 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:05,186 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:05,841 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:06,456 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:07,046 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:07,665 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:19:07,668 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:00,276 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:00,832 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:01,386 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:01,975 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:02,528 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:02,530 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:02,592 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:03,145 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:03,709 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:04,266 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:04,838 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:04,841 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:04,891 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:05,514 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:06,097 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:06,684 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:07,268 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 00:49:07,273 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:00,282 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:00,844 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:01,420 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:01,973 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:02,537 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:02,539 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:02,584 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:03,153 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:03,705 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:04,277 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:04,832 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:04,834 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:04,901 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:05,480 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:06,065 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:06,629 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:07,184 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:19:07,187 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:00,303 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:00,883 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:01,475 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:02,102 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:02,720 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:02,723 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:02,823 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:03,436 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:04,019 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:04,574 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:05,160 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:05,163 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:05,213 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:05,770 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:06,340 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:06,911 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:07,483 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 01:49:07,486 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:00,304 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:00,885 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:01,453 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:02,011 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:02,588 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:02,592 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:02,652 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:03,217 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:03,780 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:04,334 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:04,892 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:04,894 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:04,941 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:05,499 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:06,096 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:06,671 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:07,258 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:19:07,265 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:00,283 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:00,850 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:01,400 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:01,963 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:02,518 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:02,521 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:02,572 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:03,128 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:03,690 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:04,248 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:04,808 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:04,812 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:04,864 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:05,442 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:06,038 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:06,614 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:07,222 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 02:49:07,225 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:00,296 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:00,864 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:01,413 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:01,972 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:02,564 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:02,567 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:02,618 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:03,177 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:03,728 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:04,282 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:04,836 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:04,839 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:04,908 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:05,491 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:06,078 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:06,643 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:07,301 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:19:07,306 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:00,318 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:00,889 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:01,446 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:02,015 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:02,579 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:02,584 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:02,654 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:03,218 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:03,778 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:04,339 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:04,907 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:04,911 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:04,958 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:05,540 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:06,123 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:06,708 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:07,277 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 03:49:07,280 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:00,303 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:00,896 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:01,512 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:02,100 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:02,687 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:02,692 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:02,758 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:03,308 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:03,890 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:04,442 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:05,007 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:05,010 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:05,073 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:05,643 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:06,196 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:06,755 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:07,332 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:19:07,336 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:00,275 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:00,829 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:01,418 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:01,979 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:02,535 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:02,539 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:02,594 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:03,153 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:03,718 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:04,275 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:04,860 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:04,865 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:04,918 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:05,474 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:06,028 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:06,588 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:07,151 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 04:49:07,154 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:00,292 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:00,873 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:01,474 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:02,063 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:02,624 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:02,628 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:02,687 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:03,246 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:03,804 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:04,364 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:04,919 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:04,923 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:04,979 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:05,536 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:06,095 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:06,663 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:07,242 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:19:07,248 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:00,296 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:00,855 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:01,416 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:01,974 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:02,529 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:02,532 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:02,588 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:03,144 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:03,702 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:04,264 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:04,821 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:04,826 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:04,884 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:05,458 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:06,014 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:06,576 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:07,141 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 05:49:07,144 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:00,279 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:00,861 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:01,416 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:01,963 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:02,543 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:02,547 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:02,609 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:03,175 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:03,730 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:04,287 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:04,844 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:04,848 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:04,903 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:05,455 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:06,006 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:06,563 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:07,120 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:19:07,124 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:00,299 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:00,894 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:01,497 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:02,069 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:02,651 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:02,655 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:02,729 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:03,343 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:03,913 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:04,464 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:05,015 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:05,018 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:05,087 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:05,653 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:06,212 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:06,765 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:07,343 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 06:49:07,347 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:00,295 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:00,879 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:01,428 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:01,989 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:02,545 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:02,550 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:02,632 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:03,206 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:03,767 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:04,332 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:04,893 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:04,896 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:04,950 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:05,507 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:06,092 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:06,642 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:07,199 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:19:07,202 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:00,282 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:00,864 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:01,436 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:02,019 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:02,607 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:02,614 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:02,672 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:03,229 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:03,781 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:04,355 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:04,904 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:04,906 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:04,956 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:05,508 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:06,056 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:06,610 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:07,164 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 07:49:07,167 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:00,308 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:00,867 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:01,414 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:01,973 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:02,524 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:02,526 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:02,570 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:03,133 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:03,688 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:04,264 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:04,836 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:04,840 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:04,893 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:05,469 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:06,043 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:06,625 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:07,175 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:19:07,177 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:00,302 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:00,893 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:01,446 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:01,997 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:02,550 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:02,553 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:02,609 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:03,165 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:03,737 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:04,291 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:04,851 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:04,855 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:04,904 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:05,467 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:06,039 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:06,616 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:07,169 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 08:49:07,174 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:00,321 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:00,885 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:01,463 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:02,013 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:02,614 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:02,619 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:02,681 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:03,235 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:03,808 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:04,358 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:04,906 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:04,909 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:04,961 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:05,513 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:06,066 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:06,620 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:07,180 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:19:07,183 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:00,322 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:00,877 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:01,442 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:02,002 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:02,566 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:02,570 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:02,618 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:03,184 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:03,750 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:04,309 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:04,872 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:04,875 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:04,924 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:05,516 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:06,077 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:06,632 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:07,185 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 09:49:07,188 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 10:41:20,142 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 10:46:30,574 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 10:48:59,965 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 10:49:00,477 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <0.4-0.2-700_Gullet - Dressage - Wide Width - Short Length - Ainsley Saddlery.gcode>
+2025-03-10 10:49:00,478 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <300%-CFFFP_Stoper new 3.0.gcode>
+2025-03-10 10:49:00,479 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 10:49:00,480 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <CFFFP_Stoper new 3.0.gcode>
+2025-03-10 10:49:00,480 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/300_SpiralHourglass.gcode>
+2025-03-10 10:49:00,481 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/6x-300_knurling_bolt_20mm.gcode>
+2025-03-10 10:49:00,482 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/700_limitswitchmountfory 300 mc.gcode>
+2025-03-10 10:49:00,483 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_Assembly_2_-_Part_1_1.gcode>
+2025-03-10 10:49:00,484 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_Ball.gcode>
+2025-03-10 10:49:00,485 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_bltouchmount.gcode>
+2025-03-10 10:49:00,485 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_cable-organizer-4.gcode>
+2025-03-10 10:49:00,486 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_HEAT COVER RH SIDE.gcode>
+2025-03-10 10:49:00,487 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_knurling_bolt_20mm.gcode>
+2025-03-10 10:49:00,488 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_Linear Design-2 300x300mm.gcode>
+2025-03-10 10:49:00,489 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_motherboardmount (1).gcode>
+2025-03-10 10:49:00,490 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_spiral_vase.gcode>
+2025-03-10 10:49:00,491 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_SpiralHourglass.gcode>
+2025-03-10 10:49:00,492 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_V 10 STAMPING.gcode>
+2025-03-10 10:49:00,493 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_whistle3.gcode>
+2025-03-10 10:49:00,494 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/CFFFP_YACS.gcode>
+2025-03-10 10:49:00,495 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/jCFFFP_TUB-1.gcode>
+2025-03-10 10:49:00,496 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <gcodes/TPU_Gullet - Dressage - Wide Width - Short Length - Ainsley Saddlery.gcode>
+2025-03-10 10:49:00,496 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Nylon_Stoper new 3.0.gcode>
+2025-03-10 10:54:18,919 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-10 10:56:17,925 [job_state.py:_status_update()] - Job Started: Alu-Nylon_Stoper new 3.0.gcode
+2025-03-10 10:56:18,276 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 11:26:31,447 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-10 11:26:31,450 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 5.74ms
+2025-03-10 11:26:31,450 [websockets.py:open()] - Websocket Opened: ID: 548353461120, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 11:26:31,510 [websockets.py:_handle_identify()] - Websocket 548353461120 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 11:26:34,191 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 12:05:00,657 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.41ms
+2025-03-10 12:05:00,658 [websockets.py:open()] - Websocket Opened: ID: 548353460544, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 12:05:00,673 [websockets.py:_handle_identify()] - Websocket 548353460544 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 12:05:01,167 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 12:05:21,509 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353461120
+2025-03-10 12:05:26,455 [websockets.py:on_close()] - Websocket Closed: ID: 548353461120 Close Code: None, Close Reason: None, Pong Time Elapsed: 43.19
+2025-03-10 12:05:30,787 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353460544
+2025-03-10 12:05:35,661 [websockets.py:on_close()] - Websocket Closed: ID: 548353460544 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-03-10 12:05:58,022 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.35ms
+2025-03-10 12:05:58,023 [websockets.py:open()] - Websocket Opened: ID: 548353079088, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 12:06:01,051 [websockets.py:_handle_identify()] - Websocket 548353079088 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 12:06:03,763 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 12:09:17,242 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 12:09:18,057 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353079088
+2025-03-10 12:09:23,026 [websockets.py:on_close()] - Websocket Closed: ID: 548353079088 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.68
+2025-03-10 12:09:47,297 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 12:22:52,615 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 12:44:19,957 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 12:45:10,019 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 12:49:10,228 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0550>, <Task finished name='Task-4755981' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:15,732 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d00d0>, <Task finished name='Task-4756131' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:21,235 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0e50>, <Task finished name='Task-4756276' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:26,740 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0b80>, <Task finished name='Task-4756420' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:27,232 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': Timeout while connecting
+2025-03-10 12:49:32,241 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d05e0>, <Task finished name='Task-4756564' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:37,246 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0c10>, <Task finished name='Task-4756689' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:42,743 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d03a0>, <Task finished name='Task-4756838' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:48,255 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0940>, <Task finished name='Task-4756977' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:53,751 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0310>, <Task finished name='Task-4757126' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:49:54,251 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': Timeout while connecting
+2025-03-10 12:49:59,256 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0670>, <Task finished name='Task-4757266' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:50:04,264 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0430>, <Task finished name='Task-4757399' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:50:09,768 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0ee0>, <Task finished name='Task-4757544' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:50:15,273 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d08b0>, <Task finished name='Task-4757688' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:50:20,780 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0a60>, <Task finished name='Task-4757837' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 12:50:21,270 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': Timeout while connecting
+2025-03-10 12:50:26,281 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d09d0>, <Task finished name='Task-4757975' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 13:09:00,852 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-10 13:33:51,395 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Must home axis first: -0.001 0.000 10.000 [23232.719]
+2025-03-10 13:36:47,004 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-10 13:36:47,007 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 5.68ms
+2025-03-10 13:36:47,008 [websockets.py:open()] - Websocket Opened: ID: 548353488784, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 13:36:47,444 [websockets.py:_handle_identify()] - Websocket 548353488784 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 13:37:13,050 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <Alu-Nylon_Stoper new 3.0.gcode>
+2025-03-10 13:42:26,947 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7xt0Bm3iqOX59gv7
+2025-03-10 13:42:31,375 [application.py:post()] - Processing Uploaded File: alu-nylon_Stoper new 3.0-270-70.gcode
+2025-03-10 13:42:31,874 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-10 13:42:32,067 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "alu-nylon_Stoper new 3.0-270-70.gcode") successfully finished
+2025-03-10 13:42:32,075 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 5131.43ms
+2025-03-10 13:43:10,721 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-10 13:43:10,726 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 7.96ms
+2025-03-10 13:43:11,725 [job_state.py:_status_update()] - Job Started: alu-nylon_Stoper new 3.0-270-70.gcode
+2025-03-10 13:47:30,131 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-10 13:47:30,133 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 5.48ms
+2025-03-10 13:47:30,134 [websockets.py:open()] - Websocket Opened: ID: 548352989360, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 13:47:30,149 [websockets.py:_handle_identify()] - Websocket 548352989360 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 14:09:02,344 [websockets.py:on_close()] - Websocket Closed: ID: 548353488784 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.32
+2025-03-10 14:26:58,367 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 14:27:20,324 [websockets.py:write_to_socket()] - Websocket closed while writing: 548352989360
+2025-03-10 14:27:25,141 [websockets.py:on_close()] - Websocket Closed: ID: 548352989360 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2025-03-10 14:44:00,876 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-10 14:44:00,877 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-10 14:48:30,028 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 14:49:00,877 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-10 14:53:37,043 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-10 14:53:37,047 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 6.35ms
+2025-03-10 14:53:37,048 [websockets.py:open()] - Websocket Opened: ID: 548352311984, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 14:53:37,079 [websockets.py:_handle_identify()] - Websocket 548352311984 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:05:37,279 [websockets.py:write_to_socket()] - Websocket closed while writing: 548352311984
+2025-03-10 15:05:42,052 [websockets.py:on_close()] - Websocket Closed: ID: 548352311984 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.87
+2025-03-10 15:06:05,596 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 7.57ms
+2025-03-10 15:06:05,597 [websockets.py:open()] - Websocket Opened: ID: 548353078704, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:06:05,622 [websockets.py:_handle_identify()] - Websocket 548353078704 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:09:25,762 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353078704
+2025-03-10 15:09:30,602 [websockets.py:on_close()] - Websocket Closed: ID: 548353078704 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.97
+2025-03-10 15:11:04,398 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.34ms
+2025-03-10 15:11:04,399 [websockets.py:open()] - Websocket Opened: ID: 548354325280, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:11:04,416 [websockets.py:_handle_identify()] - Websocket 548354325280 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:13:44,613 [websockets.py:write_to_socket()] - Websocket closed while writing: 548354325280
+2025-03-10 15:13:49,404 [websockets.py:on_close()] - Websocket Closed: ID: 548354325280 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.95
+2025-03-10 15:14:02,220 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 15:14:12,227 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 15:14:21,217 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.35ms
+2025-03-10 15:14:21,218 [websockets.py:open()] - Websocket Opened: ID: 548354324848, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:14:21,274 [websockets.py:_handle_identify()] - Websocket 548354324848 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:15:21,299 [websockets.py:write_to_socket()] - Websocket closed while writing: 548354324848
+2025-03-10 15:15:26,224 [websockets.py:on_close()] - Websocket Closed: ID: 548354324848 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.66
+2025-03-10 15:15:42,718 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.86ms
+2025-03-10 15:15:42,719 [websockets.py:open()] - Websocket Opened: ID: 548353078512, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:15:42,814 [websockets.py:_handle_identify()] - Websocket 548353078512 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:17:12,809 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353078512
+2025-03-10 15:17:17,722 [websockets.py:on_close()] - Websocket Closed: ID: 548353078512 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.74
+2025-03-10 15:17:41,590 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 4.86ms
+2025-03-10 15:17:41,591 [websockets.py:open()] - Websocket Opened: ID: 548353078368, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:17:41,607 [websockets.py:_handle_identify()] - Websocket 548353078368 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:18:11,757 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353078368
+2025-03-10 15:18:16,596 [websockets.py:on_close()] - Websocket Closed: ID: 548353078368 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2025-03-10 15:20:48,107 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 7.09ms
+2025-03-10 15:20:48,109 [websockets.py:open()] - Websocket Opened: ID: 548353418672, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:20:48,151 [websockets.py:_handle_identify()] - Websocket 548353418672 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:26:15,604 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-10 15:26:15,608 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 8.67ms
+2025-03-10 15:26:15,611 [websockets.py:open()] - Websocket Opened: ID: 548353079568, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 15:26:19,275 [websockets.py:_handle_identify()] - Websocket 548353079568 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 15:28:12,175 [websockets.py:on_close()] - Websocket Closed: ID: 548353079568 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.52
+2025-03-10 15:36:29,806 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 15:39:17,895 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-10 15:39:19,959 [job_state.py:_status_update()] - Job Started: 04Filament_welder_coin.gcode
+2025-03-10 15:42:01,728 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 15:43:46,177 [job_state.py:_status_update()] - Job Started: 04_Bed_Level_Test.gcode
+2025-03-10 15:47:57,308 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 15:49:05,104 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 15:49:08,284 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac4e2280>, <Task finished name='Task-5112783' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:11,356 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3d0550>, <Task finished name='Task-5112983' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:19,936 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac4e2310>, <Task finished name='Task-5113306' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:20,437 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:22,458 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:24,487 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [Errno -3] Temporary failure in name resolution
+2025-03-10 15:49:28,249 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353418672
+2025-03-10 15:49:33,112 [websockets.py:on_close()] - Websocket Closed: ID: 548353418672 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2025-03-10 15:52:45,404 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 15:58:55,895 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 15:59:05,909 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 16:24:00,902 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-10 16:29:00,903 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-10 16:33:26,016 [job_state.py:_status_update()] - Job Started: alu-nylon_Stoper new 3.0-270-70.gcode
+2025-03-10 16:34:39,812 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-10 16:34:50,054 [klippy_connection.py:wait()] - Request 'pause_resume/cancel' pending: 60.00 seconds
+2025-03-10 16:34:51,408 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-10 16:34:54,514 [klippy_connection.py:wait()] - Request 'pause_resume/cancel' pending: 60.00 seconds
+2025-03-10 16:35:39,814 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2025-03-10 16:35:50,055 [klippy_connection.py:wait()] - Request 'pause_resume/cancel' pending: 120.00 seconds
+2025-03-10 16:35:51,410 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2025-03-10 16:35:54,517 [klippy_connection.py:wait()] - Request 'pause_resume/cancel' pending: 120.00 seconds
+2025-03-10 16:36:39,816 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-03-10 16:37:12,876 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 16:41:21,340 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Endstop x still triggered after retract
+2025-03-10 16:44:01,533 [job_state.py:_status_update()] - Job Started: alu-nylon_Stoper new 3.0-270-70.gcode
+2025-03-10 16:47:33,339 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 16:51:41,038 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-10 16:51:41,042 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 8.03ms
+2025-03-10 16:51:41,044 [websockets.py:open()] - Websocket Opened: ID: 548353428688, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-10 16:51:41,056 [websockets.py:_handle_identify()] - Websocket 548353428688 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-10 16:51:52,144 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarysLA1NlbTBAjvTliD
+2025-03-10 16:51:53,084 [application.py:post()] - Processing Uploaded File: 2-alu-nylon_Stoper new 3.0-260-80.gcode
+2025-03-10 16:51:53,635 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-10 16:51:53,848 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "2-alu-nylon_Stoper new 3.0-260-80.gcode") successfully finished
+2025-03-10 16:51:53,863 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 1721.07ms
+2025-03-10 16:53:12,569 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 6.16ms
+2025-03-10 16:53:13,286 [job_state.py:_status_update()] - Job Started: 2-alu-nylon_Stoper new 3.0-260-80.gcode
+2025-03-10 17:25:42,846 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:26:01,184 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353428688
+2025-03-10 17:26:06,047 [websockets.py:on_close()] - Websocket Closed: ID: 548353428688 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.90
+2025-03-10 17:29:23,125 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:29:53,161 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:30:23,198 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:30:33,217 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:33:33,476 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:49:50,950 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-10 17:52:04,901 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:52:24,947 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 17:54:00,925 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-10 17:54:00,926 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-10 18:01:15,631 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:03:15,791 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:09:06,205 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:09:16,221 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:19:10,247 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba790>, <Task finished name='Task-5369481' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:15,748 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3bae50>, <Task finished name='Task-5369621' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:21,249 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba8b0>, <Task finished name='Task-5369771' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:26,754 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3bab80>, <Task finished name='Task-5369909' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:27,249 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': Timeout while connecting
+2025-03-10 18:19:32,260 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba040>, <Task finished name='Task-5370059' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:37,272 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba5e0>, <Task finished name='Task-5370189' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:42,767 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba940>, <Task finished name='Task-5370327' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:48,270 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3baaf0>, <Task finished name='Task-5370477' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:53,777 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3bac10>, <Task finished name='Task-5370616' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:19:54,268 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': Timeout while connecting
+2025-03-10 18:19:57,050 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:19:57,342 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba4c0>, <Task finished name='Task-5370766' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:20:00,414 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3ba820>, <Task finished name='Task-5370894' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:20:09,997 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [Errno -3] Temporary failure in name resolution
+2025-03-10 18:20:12,074 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0x7fac3baca0>, <Task finished name='Task-5371148' coro=<_HTTPConnection.run() done, defined at /home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py:290> exception=gaierror(-3, 'Temporary failure in name resolution')>)
+Traceback (most recent call last):
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/ioloop.py", line 750, in _run_callback
+    ret = callback()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/simple_httpclient.py", line 340, in run
+    stream = await self.tcp_client.connect(
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/tcpclient.py", line 269, in connect
+    addrinfo = await self.resolver.resolve(host, port, af)
+  File "/home/om/moonraker-env/lib/python3.9/site-packages/tornado/netutil.py", line 433, in resolve
+    for fam, _, _, _, address in await asyncio.get_running_loop().getaddrinfo(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2025-03-10 18:28:47,750 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-10 18:49:00,285 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:00,855 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:01,409 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:01,962 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:02,520 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:02,524 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:02,575 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:03,150 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:03,699 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:04,259 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:04,819 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:04,823 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:04,881 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:05,433 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:06,001 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:06,564 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:07,128 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 18:49:07,132 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:00,297 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:00,920 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:01,479 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:02,032 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:02,590 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:02,593 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:02,643 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:03,204 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:03,766 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:04,317 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:04,904 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:04,908 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:04,982 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:05,532 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:06,088 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:06,644 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:07,198 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:19:07,201 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:00,291 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:00,869 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:01,426 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:01,979 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:02,576 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:02,580 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:02,636 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:03,189 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:03,764 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:04,326 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:04,881 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:04,886 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:04,943 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:05,503 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:06,056 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:06,646 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:07,198 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 19:49:07,201 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:00,313 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:00,881 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:01,430 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:01,985 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:02,536 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:02,538 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:02,586 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:03,138 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:03,689 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:04,246 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:04,796 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:04,798 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:04,853 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:05,434 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:06,020 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:06,580 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:07,134 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:19:07,138 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:00,291 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:00,859 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:01,419 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:01,998 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:02,571 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:02,576 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:02,644 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:03,198 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:03,768 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:04,324 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:04,890 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:04,893 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:04,944 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:05,507 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:06,065 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:06,627 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:07,175 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 20:49:07,177 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:00,293 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:00,853 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:01,412 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:01,981 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:02,529 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:02,532 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:02,582 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:03,137 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:03,689 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:04,268 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:04,857 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:04,862 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:04,908 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:05,460 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:06,010 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:06,560 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:07,125 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:19:07,128 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:00,323 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:00,898 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:01,454 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:02,007 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:02,555 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:02,558 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:02,645 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:03,218 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:03,773 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:04,342 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:04,897 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:04,901 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:04,966 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:05,533 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:06,114 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:06,662 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:07,224 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 21:49:07,227 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:00,306 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:00,863 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:01,411 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:01,986 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:02,540 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:02,544 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:02,604 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:03,154 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:03,703 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:04,269 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:04,821 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:04,824 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:04,874 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:05,436 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:05,996 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:06,552 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:07,108 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:19:07,111 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:00,326 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:00,881 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:01,429 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:01,988 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:02,536 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:02,539 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:02,592 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:03,154 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:03,706 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:04,254 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:04,804 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:04,807 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:04,859 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:05,433 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:05,996 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:06,543 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:07,110 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 22:49:07,113 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:00,300 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:00,859 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:01,419 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:01,975 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:02,525 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:02,528 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:02,589 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:03,140 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:03,692 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:04,247 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:04,835 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:04,839 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:04,912 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:05,477 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:06,026 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:06,593 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:07,152 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:19:07,156 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:00,316 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:00,871 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:01,429 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:01,992 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:02,596 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:02,601 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:02,675 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:03,231 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:03,785 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:04,336 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:04,892 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:04,896 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:04,951 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:05,507 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:06,063 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:06,623 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:07,197 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-10 23:49:07,200 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
