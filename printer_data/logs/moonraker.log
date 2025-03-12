@@ -1153,3 +1153,13 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryDfIYY2fKdePukn
 
 2025-03-12 15:40:53,268 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "2x-alu_motherboardmountoctopuspro.gcode") successfully finished
 2025-03-12 15:40:53,280 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 5776.87ms
+2025-03-12 15:48:57,660 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarywfKeDqtcCkeL9PBT
+2025-03-12 15:48:57,701 [application.py:post()] - Processing Uploaded File: log-backup.cfg
+2025-03-12 15:48:57,726 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 68.62ms
+2025-03-12 15:51:14,526 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-12 15:51:14,528 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2025-03-12 15:51:40,790 [websockets.py:write_to_socket()] - Websocket closed while writing: 547321885984
+2025-03-12 15:51:45,682 [websockets.py:on_close()] - Websocket Closed: ID: 547321885984 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.97
+2025-03-12 15:51:46,056 [websockets.py:write_to_socket()] - Websocket closed while writing: 547331221872
+2025-03-12 15:51:50,874 [websockets.py:on_close()] - Websocket Closed: ID: 547331221872 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
