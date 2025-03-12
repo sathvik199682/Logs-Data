@@ -13608,3 +13608,73 @@ print_sort_dir = date_asc
 2025-03-12 17:31:53,280 [screensaver.py:show()] - Showing Screensaver
 2025-03-12 17:31:53,281 [screensaver.py:close()] - Closing Screensaver
 2025-03-12 17:31:53,285 [screen.py:wake_screen()] - Screen wake up
+2025-03-12 18:25:45,967 [screensaver.py:close()] - Closing Screensaver
+2025-03-12 18:25:45,970 [screen.py:wake_screen()] - Screen wake up
+2025-03-12 18:25:47,673 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-12 18:25:47,711 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > more
+2025-03-12 18:25:47,729 [menu.py:arrangeMenuItems()] - X > more bedlevel
+2025-03-12 18:25:47,757 [menu.py:arrangeMenuItems()] - X > more led
+2025-03-12 18:25:47,784 [menu.py:arrangeMenuItems()] - X > more power
+2025-03-12 18:25:47,834 [menu.py:arrangeMenuItems()] - X > more spoolman
+2025-03-12 18:25:47,834 [menu.py:evaluate_enable()] - moonraker connected True
+2025-03-12 18:25:50,454 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-12 18:25:50,489 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-12 18:25:59,649 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-12 18:25:59,661 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x2362320' has no handler with id '7684952'
+  self.long_press = {}
+
+2025-03-12 18:25:59,663 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x2ff7a50' has no handler with id '7684979'
+  self.long_press = {}
+
+2025-03-12 18:25:59,676 [temperature.py:add_device()] - Adding device: extruder
+2025-03-12 18:25:59,686 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-12 18:25:59,739 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-12 18:25:59,742 [temperature.py:select_heater()] - Selecting extruder
+2025-03-12 18:25:59,743 [temperature.py:select_heater()] - Selecting heater_bed
+2025-03-12 18:26:00,433 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-12 18:26:00,433 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-12 18:26:00,433 [temperature.py:set_temperature()] - name match extruder
+2025-03-12 18:26:00,433 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S210.0
+2025-03-12 18:26:00,436 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-12 18:26:00,437 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-12 18:26:00,437 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S60.0
+2025-03-12 18:26:01,442 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-12 18:26:01,474 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-12 18:26:03,112 [screen.py:show_panel()] - Reinitializing panel extrude
+2025-03-12 18:26:03,221 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > extrude
+2025-03-12 18:26:03,224 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: SET_FILAMENT_SENSOR SENSOR=encoder_sensor ENABLE=1
+2025-03-12 18:26:07,160 [extrude.py:change_distance()] - ### Distance 25
+2025-03-12 18:26:47,226 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-12 18:26:47,228 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E-25 F120'}
+2025-03-12 18:26:56,388 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-12 18:26:56,389 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E-25 F120'}
+2025-03-12 18:27:42,814 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-12 18:27:42,816 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-12 18:27:58,538 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-12 18:27:58,540 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-12 18:28:45,998 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-12 18:28:46,032 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-12 18:28:47,537 [screen.py:show_panel()] - Reinitializing panel gcodes
+2025-03-12 18:28:47,566 [gcodes.py:__init__()] - Thumbsize: 122.66666666666666
+2025-03-12 18:28:47,586 [gcodes.py:__init__()] - thumbs
+2025-03-12 18:28:47,595 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-12 18:28:47,621 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-12 18:28:48,131 [gcodes.py:load_files()] - Loaded in 0.424 seconds
+2025-03-12 18:28:49,515 [KlippyRest.py:_do_request()] - 404 Client Error>>Invalid job uid>>None for url>>http://127.0.0.1:7125/server/history/job?uid=None
+2025-03-12 18:28:49,586 [KlippyGtk.py:Dialog()] - Showing dialog Print 2x-alu_motherboardmountoctopuspro.gcode (width=800, height=480)
+2025-03-12 18:28:50,376 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-12 18:28:50,376 [gcodes.py:confirm_print_response()] - Starting print: 2x-alu_motherboardmountoctopuspro.gcode
+2025-03-12 18:28:50,377 [KlippyWebsocket.py:print_start()] - Sending printer.print.start
+2025-03-12 18:28:50,561 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-12 18:28:50,562 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-12 18:28:50,589 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-12 18:28:50,605 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-12 18:28:50,621 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-12 18:28:50,731 [screen.py:show_panel()] - Reinitializing panel job_status
+2025-03-12 18:28:50,916 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-12 18:28:50,927 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-12 18:28:50,940 [job_status.py:update_filename()] - Updating filename to 2x-alu_motherboardmountoctopuspro.gcode
+2025-03-12 18:28:50,941 [job_status.py:_update_file_metadata()] - Update Metadata. File: 2x-alu_motherboardmountoctopuspro.gcode Size: 8872498
+2025-03-12 18:28:50,942 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-12 18:29:46,727 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-12 18:29:54,436 [screen.py:show_popup_message()] - error: // Unknown command:"M205"

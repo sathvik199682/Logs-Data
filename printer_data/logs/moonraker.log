@@ -1184,3 +1184,7 @@ Traceback (most recent call last):
 moonraker.components.shell_command.ShellCommandError: Error running shell command: 'ip -json -det address'
 2025-03-12 18:01:37,945 [websockets.py:write_to_socket()] - Websocket closed while writing: 547321641904
 2025-03-12 18:01:42,907 [websockets.py:on_close()] - Websocket Closed: ID: 547321641904 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
+2025-03-12 18:17:15,797 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-12 18:28:49,483 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-12 18:28:49,522 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 43.26ms
+2025-03-12 18:28:50,556 [job_state.py:_status_update()] - Job Started: 2x-alu_motherboardmountoctopuspro.gcode
