@@ -1182,3 +1182,5 @@ Traceback (most recent call last):
   File "/home/om/moonraker/moonraker/components/shell_command.py", line 277, in run_with_response
     raise ShellCommandError(
 moonraker.components.shell_command.ShellCommandError: Error running shell command: 'ip -json -det address'
+2025-03-12 18:01:37,945 [websockets.py:write_to_socket()] - Websocket closed while writing: 547321641904
+2025-03-12 18:01:42,907 [websockets.py:on_close()] - Websocket Closed: ID: 547321641904 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
