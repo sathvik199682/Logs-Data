@@ -18897,3 +18897,7 @@ print_sort_dir = date_asc
 2025-03-13 01:29:12,059 [screen.py:wake_screen()] - Screen wake up
 2025-03-13 01:29:12,101 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
 2025-03-13 01:29:12,114 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-13 02:29:18,979 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 02:29:19,094 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 02:29:19,094 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 02:29:19,101 [screen.py:wake_screen()] - Screen wake up
