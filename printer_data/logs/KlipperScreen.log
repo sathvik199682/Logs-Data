@@ -13472,3 +13472,7 @@ print_sort_dir = date_asc
 2025-03-12 14:02:18,874 [screen.py:show_panel()] - Reinitializing panel extrude
 2025-03-12 14:02:19,007 [screen.py:attach_panel()] - Current panel hierarchy: job_status > extrude
 2025-03-12 14:02:19,010 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: SET_FILAMENT_SENSOR SENSOR=encoder_sensor ENABLE=1
+2025-03-12 15:02:19,235 [screensaver.py:show()] - Showing Screensaver
+2025-03-12 15:02:19,290 [screensaver.py:show()] - Showing Screensaver
+2025-03-12 15:02:19,290 [screensaver.py:close()] - Closing Screensaver
+2025-03-12 15:02:19,293 [screen.py:wake_screen()] - Screen wake up

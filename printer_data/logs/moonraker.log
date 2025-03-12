@@ -1094,3 +1094,14 @@ moonraker.utils.ServerError: Git Repo klipper-backup: repo not initialized
 2025-03-12 14:03:57,633 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 6.70ms
 2025-03-12 14:03:57,634 [websockets.py:open()] - Websocket Opened: ID: 547331220480, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
 2025-03-12 14:03:57,652 [websockets.py:_handle_identify()] - Websocket 547331220480 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-12 15:07:15,733 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-12 15:07:15,734 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-12 15:13:35,673 [websockets.py:on_close()] - Websocket Closed: ID: 547331220480 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 8.03
+2025-03-12 15:13:35,863 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-12 15:13:35,868 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 8.99ms
+2025-03-12 15:13:35,870 [websockets.py:open()] - Websocket Opened: ID: 547331221872, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-12 15:13:35,900 [websockets.py:_handle_identify()] - Websocket 547331221872 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-12 15:14:04,391 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXc3V9dtN1FEGEeNQ
+2025-03-12 15:14:04,423 [application.py:post()] - Processing Uploaded File: log-backup.cfg
+2025-03-12 15:14:04,449 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 69.85ms
