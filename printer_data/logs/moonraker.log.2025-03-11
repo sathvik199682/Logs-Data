@@ -1,0 +1,526 @@
+-------------------- Log Start | Mon Mar 10 18:49:00 2025 --------------------
+data_path: /home/om/printer_data
+is_default_data_path: False
+config_file: /home/om/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 3060fe1b3f574a95a5a343c6fc66396c
+unix_socket_path: /home/om/printer_data/comms/moonraker.sock
+software_version: v0.8.0-268-ga23187b
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/om/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = False
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[announcements]
+subscriptions = 
+	mainsail
+
+#################################################################
+All Configuration Files:
+/home/om/printer_data/config/moonraker.conf
+#################################################################
+
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 182
+
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: add5f1c6
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Plus Rev 1.4
+  total_memory: 880328
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SK32G
+  product_revision: 8.5
+  serial_number: 83e73685
+  manufacturer_date: 6/2024
+  capacity: 29.7 GiB
+  total_bytes: 31914983424
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['system.slice', 'network-online.target', 'sysinit.target']
+**After=['systemd-journald.socket', 'system.slice', 'network-online.target', 'sysinit.target', 'klipper.service', 'basic.target']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/om/printer_data/systemd/moonraker.env
+**ExecStart=/home/om/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=om
+
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['-.mount', 'sysinit.target', 'system.slice']
+**After=['-.mount', 'klipper-mcu.service', 'network-online.target', 'basic.target', 'system.slice', 'systemd-journald.socket', 'sysinit.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
+**ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/om/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=om
+Klipper Version: v0.12.0-85-gd785b396a-dirty
+2025-03-11 00:19:00,326 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:00,909 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:01,459 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:02,012 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:02,572 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:02,576 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:02,620 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:03,188 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:03,735 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:04,303 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:04,858 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:04,861 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:04,906 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:05,462 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:06,036 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:06,589 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:07,140 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:19:07,143 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:00,333 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:00,881 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:01,443 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:01,991 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:02,560 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:02,564 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:02,661 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:03,221 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:03,784 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:04,348 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:04,924 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:04,932 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:04,998 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:05,558 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:06,106 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:06,654 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:07,213 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 00:49:07,216 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:00,308 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:00,862 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:01,420 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:01,986 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:02,537 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:02,540 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:02,602 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:03,151 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:03,709 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:04,261 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:04,838 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:04,844 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:04,910 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:05,468 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:06,017 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:06,586 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:07,141 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:19:07,144 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:00,314 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:00,895 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:01,446 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:02,002 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:02,572 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:02,575 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:02,629 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:03,183 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:03,735 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:04,300 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:04,859 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:04,863 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:04,932 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:05,481 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:06,038 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:06,613 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:07,193 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 01:49:07,197 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:00,338 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:00,888 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:01,440 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:01,987 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:02,535 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:02,538 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:02,586 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:03,144 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:03,721 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:04,286 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:04,852 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:04,855 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:04,911 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:05,492 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:06,074 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:06,626 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:07,189 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:19:07,192 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:00,311 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:00,868 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:01,428 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:01,983 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:02,544 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:02,547 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:02,595 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:03,164 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:03,745 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:04,333 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:04,897 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:04,900 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:04,952 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:05,511 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:06,065 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:06,626 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:07,181 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 02:49:07,184 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:00,307 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:00,858 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:01,411 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:01,967 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:02,519 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:02,521 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:02,568 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:03,120 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:03,669 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:04,223 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:04,799 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:04,805 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:04,857 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:05,407 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:05,960 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:06,518 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:07,077 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:19:07,080 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:00,318 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:00,885 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:01,439 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:01,990 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:02,570 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:02,574 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:02,634 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:03,194 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:03,746 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:04,314 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:04,867 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:04,869 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:04,918 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:05,479 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:06,036 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:06,598 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:07,165 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 03:49:07,169 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:00,321 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:00,870 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:01,421 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:01,983 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:02,534 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:02,538 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:02,585 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:03,142 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:03,697 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:04,248 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:04,801 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:04,804 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:04,851 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:05,403 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:05,953 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:06,503 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:07,055 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:19:07,058 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:00,344 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:00,896 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:01,456 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:02,002 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:02,562 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:02,565 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:02,615 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:03,182 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:03,732 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:04,289 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:04,848 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:04,851 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:04,902 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:05,483 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:06,073 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:06,630 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:07,183 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 04:49:07,185 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:00,313 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:00,887 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:01,439 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:01,995 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:02,542 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:02,545 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:02,593 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:03,141 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:03,692 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:04,242 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:04,794 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:04,798 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:04,846 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:05,395 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:05,945 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:06,518 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:07,071 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:19:07,076 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:00,333 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:00,888 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:01,440 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:01,990 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:02,570 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:02,576 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:02,643 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:03,208 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:03,758 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:04,319 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:04,877 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:04,879 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:04,941 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:05,496 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:06,050 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:06,598 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:07,146 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 05:49:07,150 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:00,326 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:00,879 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:01,438 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:01,990 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:02,541 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:02,544 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:02,604 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:03,159 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:03,742 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:04,314 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:04,873 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:04,878 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:04,934 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:05,486 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:06,037 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:06,584 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:07,139 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:19:07,141 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:00,320 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:00,868 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:01,422 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:01,970 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:02,520 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:02,524 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:02,576 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:03,133 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:03,710 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:04,282 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:04,862 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:04,866 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:04,924 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:05,482 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:06,031 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:06,586 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:07,141 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 06:49:07,144 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:00,341 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:00,919 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:01,468 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:02,025 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:02,589 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:02,592 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:02,650 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:03,200 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:03,753 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:04,316 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:04,864 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:04,867 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:04,919 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:05,471 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:06,030 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:06,614 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:07,169 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:19:07,171 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:00,323 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:00,880 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:01,433 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:01,988 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:02,562 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:02,566 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:02,627 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:03,198 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:03,768 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:04,345 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:04,911 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:04,914 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:04,964 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:05,521 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:06,071 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:06,629 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:07,183 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 07:49:07,186 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:00,343 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:00,933 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:01,485 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:02,043 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:02,592 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:02,596 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:02,657 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:03,205 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:03,761 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:04,327 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:04,878 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:04,882 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:04,942 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:05,496 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:06,049 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:06,625 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:07,211 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 08:19:07,216 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-11 12:22:42,167 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-11 12:22:42,171 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 6.58ms
+2025-03-11 12:22:42,172 [websockets.py:open()] - Websocket Opened: ID: 548353508832, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 12:22:42,188 [websockets.py:_handle_identify()] - Websocket 548353508832 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 12:22:50,764 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryODfyE7JYkApubW9u
+2025-03-11 12:22:51,498 [application.py:post()] - Processing Uploaded File: trial nylon-260-80_Stoper new 3.0.gcode
+2025-03-11 12:22:52,117 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-11 12:22:52,338 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "trial nylon-260-80_Stoper new 3.0.gcode") successfully finished
+2025-03-11 12:22:52,346 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 1584.24ms
+2025-03-11 12:54:20,488 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-11 12:54:20,492 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 6.17ms
+2025-03-11 12:54:20,492 [websockets.py:open()] - Websocket Opened: ID: 548353439056, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 12:54:20,507 [websockets.py:_handle_identify()] - Websocket 548353439056 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 13:24:01,217 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-11 13:47:46,426 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-11 13:48:02,113 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-11 13:48:02,120 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 9.76ms
+2025-03-11 13:48:03,085 [job_state.py:_status_update()] - Job Started: trial nylon-260-80_Stoper new 3.0.gcode
+2025-03-11 13:59:01,224 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-11 14:29:27,856 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-11 14:29:27,859 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 5.72ms
+2025-03-11 14:29:27,860 [websockets.py:open()] - Websocket Opened: ID: 548353428976, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 14:29:27,871 [websockets.py:_handle_identify()] - Websocket 548353428976 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 14:29:50,522 [websockets.py:write_to_socket()] - Websocket closed while writing: 548353439056
+2025-03-11 14:29:55,498 [websockets.py:on_close()] - Websocket Closed: ID: 548353439056 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.89
+2025-03-11 14:30:19,173 [websockets.py:on_close()] - Websocket Closed: ID: 548353508832 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.99
+2025-03-11 14:35:18,667 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-11 14:35:18,671 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 6.65ms
+2025-03-11 14:35:18,672 [websockets.py:open()] - Websocket Opened: ID: 548353428496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 14:35:19,202 [websockets.py:_handle_identify()] - Websocket 548353428496 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 14:49:01,240 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-11 14:54:14,050 [websockets.py:on_close()] - Websocket Closed: ID: 548353428496 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.37
+2025-03-11 15:34:01,250 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.103
+2025-03-11 15:39:01,251 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-11 15:47:45,534 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-11 15:47:45,538 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 8.48ms
+2025-03-11 15:47:45,539 [websockets.py:open()] - Websocket Opened: ID: 548353508688, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 15:47:45,552 [websockets.py:_handle_identify()] - Websocket 548353508688 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 16:09:01,683 [websockets.py:on_close()] - Websocket Closed: ID: 548353508688 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.39
+2025-03-11 16:45:06,873 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 6.07ms
+2025-03-11 16:45:06,874 [websockets.py:open()] - Websocket Opened: ID: 548353509264, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 16:45:08,223 [websockets.py:_handle_identify()] - Websocket 548353509264 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 16:52:42,104 [websockets.py:on_close()] - Websocket Closed: ID: 548353509264 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.17
+2025-03-11 17:36:31,784 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 12.55ms
+2025-03-11 17:36:31,785 [websockets.py:open()] - Websocket Opened: ID: 548353507776, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 17:36:31,802 [websockets.py:_handle_identify()] - Websocket 548353507776 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 18:07:40,999 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXHwMUsEbljo4k034
+2025-03-11 18:07:41,196 [application.py:post()] - Processing Uploaded File: CFFFP_whistle3.gcode
+2025-03-11 18:07:42,038 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-11 18:07:42,202 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "CFFFP_whistle3.gcode") successfully finished
+2025-03-11 18:07:42,230 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 1250.29ms
+2025-03-11 18:10:18,506 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-11 18:11:32,451 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-11 18:11:32,488 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 54.41ms
+2025-03-11 18:11:33,829 [job_state.py:_status_update()] - Job Started: CFFFP_whistle3.gcode
+2025-03-11 18:23:27,407 [websockets.py:on_close()] - Websocket Closed: ID: 548353507776 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.61
+2025-03-11 18:40:14,351 [websockets.py:on_close()] - Websocket Closed: ID: 548353428976 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.41
+2025-03-11 18:59:07,356 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 11.45ms
+2025-03-11 18:59:07,359 [websockets.py:open()] - Websocket Opened: ID: 548352989408, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-11 18:59:07,375 [websockets.py:_handle_identify()] - Websocket 548352989408 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-11 18:59:23,956 [websockets.py:on_close()] - Websocket Closed: ID: 548352989408 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.46
+2025-03-11 19:14:01,309 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-11 20:04:01,322 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
