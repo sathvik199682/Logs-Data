@@ -1188,3 +1188,4 @@ moonraker.components.shell_command.ShellCommandError: Error running shell comman
 2025-03-12 18:28:49,483 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
 2025-03-12 18:28:49,522 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 43.26ms
 2025-03-12 18:28:50,556 [job_state.py:_status_update()] - Job Started: 2x-alu_motherboardmountoctopuspro.gcode
+2025-03-12 19:32:15,817 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
