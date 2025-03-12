@@ -13604,3 +13604,7 @@ print_sort_dir = date_asc
 2025-03-12 16:31:48,405 [network.py:toggle_wifi()] - WiFi True
 2025-03-12 16:31:48,457 [screen.py:show_popup_message()] - error: Unexpected error: Scanning not allowed while unavailable
 2025-03-12 16:31:48,490 [screen.py:show_popup_message()] - error: Unexpected error: Scanning not allowed while unavailable
+2025-03-12 17:31:53,236 [screensaver.py:show()] - Showing Screensaver
+2025-03-12 17:31:53,280 [screensaver.py:show()] - Showing Screensaver
+2025-03-12 17:31:53,281 [screensaver.py:close()] - Closing Screensaver
+2025-03-12 17:31:53,285 [screen.py:wake_screen()] - Screen wake up
