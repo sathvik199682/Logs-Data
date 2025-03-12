@@ -1105,3 +1105,40 @@ moonraker.utils.ServerError: Git Repo klipper-backup: repo not initialized
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXc3V9dtN1FEGEeNQ
 2025-03-12 15:14:04,423 [application.py:post()] - Processing Uploaded File: log-backup.cfg
 2025-03-12 15:14:04,449 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 69.85ms
+2025-03-12 15:15:51,487 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryg5qyWA0iZBHDRjcq
+2025-03-12 15:15:51,514 [application.py:post()] - Processing Uploaded File: log-backup.cfg
+2025-03-12 15:15:51,529 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 44.18ms
+2025-03-12 15:16:08,406 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-12 15:16:08,865 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-12 15:20:15,802 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryDBua3P7enhFWnuTl
+2025-03-12 15:20:15,867 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-12 15:20:15,881 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 81.07ms
+2025-03-12 15:20:25,338 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryZv13glUOxl1YBR4F
+2025-03-12 15:20:25,382 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-12 15:20:25,396 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 59.86ms
+2025-03-12 15:20:26,592 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-12 15:20:28,612 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-12 15:20:28,730 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', 'system.slice', '-.mount']
+**After=['-.mount', 'systemd-journald.socket', 'sysinit.target', 'klipper-mcu.service', 'system.slice', 'basic.target', 'network-online.target']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
+**ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/om/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=om
+2025-03-12 15:20:31,661 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-12 15:20:31,664 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-12 15:20:31,723 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-12 15:20:31,898 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-12 15:20:32,178 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-12 15:20:32,666 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
