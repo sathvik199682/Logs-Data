@@ -1142,3 +1142,14 @@ Properties:
 2025-03-12 15:20:31,898 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-03-12 15:20:32,178 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-03-12 15:20:32,666 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-12 15:40:30,675 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-12 15:40:30,678 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 6.05ms
+2025-03-12 15:40:30,679 [websockets.py:open()] - Websocket Opened: ID: 547321885984, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-12 15:40:30,718 [websockets.py:_handle_identify()] - Websocket 547321885984 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-12 15:40:47,508 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryDfIYY2fKdePuknDF
+2025-03-12 15:40:51,960 [application.py:post()] - Processing Uploaded File: 2x-alu_motherboardmountoctopuspro.gcode
+2025-03-12 15:40:53,040 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-12 15:40:53,268 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "2x-alu_motherboardmountoctopuspro.gcode") successfully finished
+2025-03-12 15:40:53,280 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 5776.87ms
