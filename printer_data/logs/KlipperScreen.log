@@ -18889,3 +18889,11 @@ print_sort_dir = date_asc
 2025-03-13 01:14:24,220 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
 2025-03-13 01:14:24,220 [printer.py:change_state()] - Adding callback for state: ready
 2025-03-13 01:14:24,237 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'complete'
+2025-03-13 01:29:07,573 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 01:29:07,613 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 01:29:07,613 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 01:29:07,620 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 01:29:12,054 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 01:29:12,059 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 01:29:12,101 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 01:29:12,114 [screen.py:set_screenblanking_timeout()] - Using DPMS
