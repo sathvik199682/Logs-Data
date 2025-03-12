@@ -1166,3 +1166,4 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundarywfKeDqtcCkeL9P
 2025-03-12 16:02:17,786 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -3] Temporary failure in name resolution
 2025-03-12 16:02:19,815 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [Errno -3] Temporary failure in name resolution
 2025-03-12 16:02:21,843 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [Errno -3] Temporary failure in name resolution
+2025-03-12 16:22:15,768 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
