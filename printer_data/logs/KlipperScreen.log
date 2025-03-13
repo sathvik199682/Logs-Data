@@ -19057,3 +19057,14 @@ print_sort_dir = date_asc
 2025-03-13 09:48:14,165 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
 2025-03-13 09:48:14,168 [temperature.py:select_heater()] - Selecting extruder
 2025-03-13 09:48:14,169 [temperature.py:select_heater()] - Selecting heater_bed
+2025-03-13 10:18:36,770 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-13 10:18:36,958 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-13 10:21:45,439 [screen.py:show_panel()] - Reinitializing panel bed_mesh
+2025-03-13 10:21:45,488 [bed_mesh.py:add_profile()] - Adding Profile: default
+2025-03-13 10:21:45,522 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > bed_mesh
+2025-03-13 10:21:45,523 [bed_mesh.py:activate_mesh()] - Active None changing to default
+2025-03-13 10:22:16,819 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-13 10:22:16,947 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-13 10:25:28,055 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-13 10:25:28,056 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-13 10:26:24,728 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
