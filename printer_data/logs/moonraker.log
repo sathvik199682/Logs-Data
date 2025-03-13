@@ -1553,3 +1553,43 @@ Properties:
 2025-03-13 15:45:24,142 [websockets.py:open()] - Websocket Opened: ID: 547321351184, Proxied: False, User Agent: , Host Name: 127.0.0.1
 2025-03-13 15:45:24,405 [websockets.py:_handle_identify()] - Websocket 547321351184 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
 2025-03-13 15:45:25,018 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-13 16:11:54,576 [job_state.py:_status_update()] - Job Started: 04hollow-cylinder.gcode
+2025-03-13 16:22:07,249 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-13 16:23:20,466 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.103
+2025-03-13 16:23:20,471 [application.py:log_request()] - 101 GET /websocket (192.168.1.103) [_TRUSTED_USER_] 8.93ms
+2025-03-13 16:23:20,472 [websockets.py:open()] - Websocket Opened: ID: 547295447504, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-13 16:23:20,506 [websockets.py:_handle_identify()] - Websocket 547295447504 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-13 17:13:05,198 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-13 17:45:45,816 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAEEky3uwKNHSxQIt
+2025-03-13 17:45:46,060 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-13 17:45:46,084 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 279.83ms
+2025-03-13 17:45:48,342 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryyPmYklIS2WJBOGTZ
+2025-03-13 17:45:48,440 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-13 17:45:48,449 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 107.60ms
+2025-03-13 17:45:49,545 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-13 17:45:50,810 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-13 17:45:53,532 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-13 17:45:53,535 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-13 17:45:53,784 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-13 17:45:53,899 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-13 17:45:54,086 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-13 17:45:54,362 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-13 17:45:54,552 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-13 17:57:32,087 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryyGXjwq9jN0B907Ts
+2025-03-13 17:57:32,156 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-13 17:57:32,171 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 87.10ms
+2025-03-13 17:57:36,314 [application.py:prepare()] - Upload Request Received from 192.168.1.103
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8i7E28in32TRWIgr
+2025-03-13 17:57:36,386 [application.py:post()] - Processing Uploaded File: printer.cfg
+2025-03-13 17:57:36,402 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.103) [_TRUSTED_USER_] 92.35ms
+2025-03-13 17:57:37,521 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-13 17:57:38,786 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-13 17:57:41,471 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-13 17:57:41,475 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-13 17:57:41,724 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-13 17:57:42,022 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-13 17:57:42,494 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-13 17:57:42,560 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
