@@ -19352,3 +19352,4 @@ print_sort_dir = date_desc
 2025-03-13 15:45:25,763 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
 2025-03-13 15:45:25,806 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder']
 2025-03-13 15:45:25,831 [screen.py:init_tempstore()] - Temperature store size: 1200
+2025-03-13 15:59:08,871 [base_panel.py:battery_percentage()] - Battery information not available.
