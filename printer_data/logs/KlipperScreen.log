@@ -19697,3 +19697,106 @@ print_sort_dir = date_desc
 2025-03-13 18:09:35,372 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S0
 2025-03-13 18:09:36,573 [screen.py:_menu_go_back()] - #### Menu go back
 2025-03-13 18:09:36,604 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-13 17:40:40,734 [functions.py:log_start()] - --------------------KlipperScreen Log Start--------------------
+2025-03-13 17:40:40,735 [functions.py:log_start()] - KlipperScreen Version: v0.4.5-10-43ad9fc6-dirty
+2025-03-13 17:40:40,735 [functions.py:log_start()] - Python version: 3.9
+2025-03-13 17:40:41,182 [config.py:get_config_file_location()] - Passed config (-c): .
+2025-03-13 17:40:41,182 [config.py:__init__()] - Config path location: /home/om/printer_data/config/KlipperScreen.conf
+2025-03-13 17:40:41,199 [config.py:_include_config()] - Parsing files: ['/home/om/KlipperScreen/config/main_menu.conf']
+2025-03-13 17:40:41,237 [config.py:_include_config()] - Parsing files: ['/home/om/KlipperScreen/config/splash_menu.conf']
+2025-03-13 17:40:41,623 [config.py:_include_config()] - Parsing files: ['/home/om/KlipperScreen/config/print_menu.conf']
+2025-03-13 17:40:43,180 [config.py:_include_config()] - Parsing files: ['/home/om/KlipperScreen/config/move_menu.conf']
+2025-03-13 17:40:43,885 [config.py:log_config()] - ===== Config File =====
+
+=======================
+2025-03-13 17:40:43,888 [config.py:__init__()] - ====== Saved Def ======
+
+[main]
+print_sort_dir = date_desc
+
+=======================
+2025-03-13 17:40:43,890 [config.py:__init__()] - Configured printers: [
+  {
+    "Printer": {
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": "7125",
+      "moonraker_path": "",
+      "moonraker_ssl": null,
+      "moonraker_api_key": ""
+    }
+  }
+]
+2025-03-13 17:40:44,492 [config.py:create_translations()] - Selected lang: system_lang OS lang: en_GB
+2025-03-13 17:40:44,492 [config.py:install_language()] - Using lang en
+2025-03-13 17:40:44,532 [screen.py:__init__()] - Display for xset: :0
+2025-03-13 17:40:44,539 [screen.py:__init__()] - Screen 0: 800x480
+2025-03-13 17:40:44,539 [screen.py:__init__()] - Monitors: 1 using number: 0
+2025-03-13 17:40:44,541 [screen.py:__init__()] - Wayland: False Display name: :0
+2025-03-13 17:40:44,546 [screen.py:__init__()] - Screen resolution: 800x480
+2025-03-13 17:40:44,866 [KlippyGtk.py:__init__()] - Font size: 17.8 (medium)
+2025-03-13 17:40:45,930 [base_panel.py:battery_percentage()] - Battery information not available.
+2025-03-13 17:40:48,895 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 17:40:48,912 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-13 17:40:48,925 [screen.py:initial_connection()] - Default printer: None
+2025-03-13 17:40:49,035 [screen.py:connect_printer()] - Connecting to printer: Printer
+2025-03-13 17:40:49,036 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-13 17:40:49,115 [screen.py:_load_panel()] - Loading panel: splash_screen
+2025-03-13 17:40:49,234 [screen.py:attach_panel()] - Current panel hierarchy: splash_screen
+2025-03-13 17:40:49,312 [KlippyWebsocket.py:connect()] - Attempting to connect
+2025-03-13 17:40:49,313 [KlippyWebsocket.py:connect()] - Starting websocket thread
+2025-03-13 17:40:49,329 [_logging.py:info()] - Websocket connected
+2025-03-13 17:40:49,330 [KlippyWebsocket.py:on_open()] - Moonraker Websocket Open
+2025-03-13 17:40:49,339 [screen.py:websocket_connected()] - ### websocket_connected
+2025-03-13 17:40:49,407 [KlippyWebsocket.py:identify_client()] - Sending server.connection.identify
+2025-03-13 17:40:49,433 [printer.py:configure_cameras()] - Cameras: [{'name': 'Print Monitor', 'enabled': True, 'icon': 'mdiWebcam', 'aspect_ratio': '4:3', 'target_fps': 15, 'target_fps_idle': 15, 'location': 'printer', 'service': 'mjpegstreamer-adaptive', 'stream_url': '/webcam/?action=stream', 'snapshot_url': '/webcam/?action=snapshot', 'flip_horizontal': False, 'flip_vertical': False, 'rotation': 0, 'source': 'database', 'extra_data': {'hideFps': True}, 'uid': '7bd5fcf3-2c5a-4e6f-9a67-839212301fd9'}]
+2025-03-13 17:40:49,453 [screen.py:init_klipper()] - Moonraker info {'klippy_connected': True, 'klippy_state': 'ready', 'components': ['secrets', 'template', 'klippy_connection', 'jsonrpc', 'internal_transport', 'application', 'websockets', 'dbus_manager', 'database', 'file_manager', 'klippy_apis', 'shell_command', 'machine', 'data_store', 'proc_stats', 'job_state', 'job_queue', 'http_client', 'announcements', 'webcam', 'extensions', 'update_manager', 'octoprint_compat', 'history', 'authorization'], 'failed_components': [], 'registered_directories': ['config', 'logs', 'gcodes', 'config_examples', 'docs'], 'warnings': [], 'websocket_count': 2, 'moonraker_version': 'v0.8.0-268-ga23187b', 'missing_klippy_requirements': [], 'api_version': [1, 4, 0], 'api_version_string': '1.4.0'}
+2025-03-13 17:40:49,718 [printer.py:log_counts()] - Klipper version: v0.12.0-85-gd785b396a-dirty
+2025-03-13 17:40:49,719 [printer.py:log_counts()] - # Extruders: 1
+2025-03-13 17:40:49,719 [printer.py:log_counts()] - # Temperature devices: 1
+2025-03-13 17:40:49,720 [printer.py:log_counts()] - # Fans: 2
+2025-03-13 17:40:49,720 [printer.py:log_counts()] - # Output pins: 2
+2025-03-13 17:40:49,720 [printer.py:log_counts()] - # PWM tools: 0
+2025-03-13 17:40:49,720 [printer.py:log_counts()] - # Leds: 0
+2025-03-13 17:40:49,977 [KlippyWebsocket.py:object_subscription()] - Sending printer.objects.subscribe
+2025-03-13 17:40:49,980 [files.py:set_gcodes_path()] - Gcodes path: /home/om/printer_data/gcodes
+2025-03-13 17:40:49,980 [screen.py:init_klipper()] - Printer initialized
+2025-03-13 17:40:49,982 [printer.py:change_state()] - Changing state from 'disconnected' to 'ready'
+2025-03-13 17:40:49,982 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-13 17:40:50,167 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 17:40:50,183 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-13 17:40:50,195 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-13 17:40:50,202 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-13 17:40:50,303 [screen.py:_load_panel()] - Loading panel: main_menu
+2025-03-13 17:40:50,673 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-13 17:40:50,686 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-13 17:40:50,700 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-13 17:40:50,782 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-13 17:40:50,802 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-13 17:40:50,837 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder']
+2025-03-13 17:40:50,856 [screen.py:init_tempstore()] - Temperature store size: 1200
+2025-03-13 18:29:07,441 [base_panel.py:battery_percentage()] - Battery information not available.
+2025-03-13 18:29:19,215 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-13 18:29:19,217 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-13 18:29:19,274 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 18:29:19,293 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-13 18:29:19,309 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-13 18:29:19,395 [screen.py:_load_panel()] - Loading panel: job_status
+2025-03-13 18:29:19,603 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-13 18:29:19,620 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-13 18:29:19,644 [job_status.py:update_filename()] - Updating filename to CFFFP_beltfixture.gcode
+2025-03-13 18:29:19,645 [job_status.py:_update_file_metadata()] - Update Metadata. File: CFFFP_beltfixture.gcode Size: 2773224
+2025-03-13 18:29:19,649 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-13 18:31:34,837 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-13 19:29:19,444 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 19:29:19,467 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 19:29:19,468 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 19:29:19,471 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 19:57:48,653 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 19:57:48,659 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 19:57:48,698 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-13 19:57:57,418 [screen.py:show_popup_message()] - error: Endstop x still triggered after retract
+2025-03-13 19:57:57,506 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-13 19:57:57,506 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-13 19:57:57,519 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'cancelled'
+2025-03-13 19:57:57,601 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 19:57:57,619 [screen.py:set_screenblanking_timeout()] - Using DPMS

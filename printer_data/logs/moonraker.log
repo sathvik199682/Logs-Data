@@ -1922,3 +1922,28 @@ Properties:
 2025-03-13 17:40:44,937 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 6.55ms
 2025-03-13 17:40:44,938 [websockets.py:open()] - Websocket Opened: ID: 547717971392, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
 2025-03-13 17:40:44,958 [websockets.py:_handle_identify()] - Websocket 547717971392 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-13 17:40:49,303 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-13 17:40:49,325 [application.py:log_request()] - 101 GET /websocket?token= (127.0.0.1) [_TRUSTED_USER_] 5.13ms
+2025-03-13 17:40:49,326 [websockets.py:open()] - Websocket Opened: ID: 547690879776, Proxied: False, User Agent: , Host Name: 127.0.0.1
+2025-03-13 17:40:49,411 [websockets.py:_handle_identify()] - Websocket 547690879776 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
+2025-03-13 17:40:50,200 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-13 18:28:15,686 [websockets.py:write_to_socket()] - Websocket closed while writing: 547717971392
+2025-03-13 18:28:19,943 [websockets.py:on_close()] - Websocket Closed: ID: 547717971392 Close Code: None, Close Reason: None, Pong Time Elapsed: 17.06
+2025-03-13 18:28:33,735 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 4.52ms
+2025-03-13 18:28:33,736 [websockets.py:open()] - Websocket Opened: ID: 547691053984, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-13 18:28:33,751 [websockets.py:_handle_identify()] - Websocket 547691053984 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-13 18:28:39,066 [websockets.py:on_close()] - Websocket Closed: ID: 547691053984 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.33
+2025-03-13 18:28:39,288 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 5.15ms
+2025-03-13 18:28:39,289 [websockets.py:open()] - Websocket Opened: ID: 547690964496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-13 18:28:39,301 [websockets.py:_handle_identify()] - Websocket 547690964496 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-13 18:28:59,704 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarypRocURbBcdmBACFU
+2025-03-13 18:29:02,118 [application.py:post()] - Processing Uploaded File: CFFFP_beltfixture.gcode
+2025-03-13 18:29:02,850 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-13 18:29:03,078 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "CFFFP_beltfixture.gcode") successfully finished
+2025-03-13 18:29:03,088 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 3393.42ms
+2025-03-13 18:29:19,206 [job_state.py:_status_update()] - Job Started: CFFFP_beltfixture.gcode
+2025-03-13 18:37:38,395 [websockets.py:on_close()] - Websocket Closed: ID: 547690964496 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.01
+2025-03-13 18:42:50,223 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-13 19:32:50,239 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
