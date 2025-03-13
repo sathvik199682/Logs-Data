@@ -19068,3 +19068,22 @@ print_sort_dir = date_asc
 2025-03-13 10:25:28,055 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
 2025-03-13 10:25:28,056 [printer.py:change_state()] - Adding callback for state: printing
 2025-03-13 10:26:24,728 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-13 11:22:24,627 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 11:22:24,664 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 11:22:24,664 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 11:22:24,672 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 11:22:29,285 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 11:22:29,287 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 11:22:29,332 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-13 11:22:29,351 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-13 11:22:29,368 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-13 11:22:29,635 [screen.py:show_panel()] - Reinitializing panel job_status
+2025-03-13 11:22:29,829 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-13 11:22:29,842 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-13 11:22:29,857 [job_status.py:update_filename()] - Updating filename to 123.gcode
+2025-03-13 11:22:29,858 [job_status.py:_update_file_metadata()] - Update Metadata. File: 123.gcode Size: 19272257
+2025-03-13 11:22:29,860 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-13 11:36:21,555 [screen.py:show_panel()] - Reinitializing panel fine_tune
+2025-03-13 11:36:21,665 [screen.py:attach_panel()] - Current panel hierarchy: job_status > fine_tune
+2025-03-13 11:36:37,896 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-13 11:36:38,016 [screen.py:attach_panel()] - Current panel hierarchy: job_status
