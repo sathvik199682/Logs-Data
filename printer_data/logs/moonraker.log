@@ -455,3 +455,5 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary39hvnjN8M1VJhw
 2025-03-13 10:25:15,198 [websockets.py:open()] - Websocket Opened: ID: 547321977008, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36, Host Name: 192.168.1.117
 2025-03-13 10:25:15,263 [websockets.py:_handle_identify()] - Websocket 547321977008 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
 2025-03-13 10:25:22,024 [job_state.py:_status_update()] - Job Started: 123.gcode
+2025-03-13 10:31:13,963 [websockets.py:on_close()] - Websocket Closed: ID: 547321640224 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.82
+2025-03-13 10:32:15,306 [websockets.py:on_close()] - Websocket Closed: ID: 547321977008 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 10.10
