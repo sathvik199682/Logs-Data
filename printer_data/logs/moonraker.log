@@ -423,3 +423,7 @@ moonraker.components.shell_command.ShellCommandError: Error running shell comman
 2025-03-13 08:32:22,655 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
 2025-03-13 09:44:17,396 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
 2025-03-13 09:44:34,851 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-13 10:06:29,120 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-13 10:06:29,129 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 11.79ms
+2025-03-13 10:06:29,130 [websockets.py:open()] - Websocket Opened: ID: 547321640224, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-13 10:06:29,206 [websockets.py:_handle_identify()] - Websocket 547321640224 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
