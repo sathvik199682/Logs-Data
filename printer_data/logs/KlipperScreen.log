@@ -19038,3 +19038,22 @@ print_sort_dir = date_asc
 2025-03-13 09:44:34,983 [KlippyGtk.py:Dialog()] - Showing dialog Print CFFFP_YACS.gcode (width=800, height=480)
 2025-03-13 09:44:50,457 [KlippyGtk.py:remove_dialog()] - Removing Dialog
 2025-03-13 09:44:58,147 [KlippyGtk.py:Dialog()] - Showing dialog Print trial nylon-260-80_Stoper new 3.0.gcode (width=800, height=480)
+2025-03-13 09:45:15,215 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-13 09:45:24,279 [KlippyGtk.py:Dialog()] - Showing dialog Print trial nylon-260-80_Stoper new 3.0.gcode (width=800, height=480)
+2025-03-13 09:47:11,858 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-13 09:47:19,650 [KlippyGtk.py:Dialog()] - Showing dialog Print trial nylon-260-80_Stoper new 3.0.gcode (width=800, height=480)
+2025-03-13 09:47:34,987 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-13 09:47:50,221 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-13 09:47:50,824 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-13 09:48:14,065 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-13 09:48:14,087 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x2769490' has no handler with id '9151193'
+  self.long_press = {}
+
+2025-03-13 09:48:14,088 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x2c60ea0' has no handler with id '9151220'
+  self.long_press = {}
+
+2025-03-13 09:48:14,101 [temperature.py:add_device()] - Adding device: extruder
+2025-03-13 09:48:14,111 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-13 09:48:14,165 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-13 09:48:14,168 [temperature.py:select_heater()] - Selecting extruder
+2025-03-13 09:48:14,169 [temperature.py:select_heater()] - Selecting heater_bed
