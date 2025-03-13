@@ -19087,3 +19087,24 @@ print_sort_dir = date_asc
 2025-03-13 11:36:21,665 [screen.py:attach_panel()] - Current panel hierarchy: job_status > fine_tune
 2025-03-13 11:36:37,896 [screen.py:_menu_go_back()] - #### Menu go back
 2025-03-13 11:36:38,016 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-13 12:36:39,045 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 12:36:39,087 [screensaver.py:show()] - Showing Screensaver
+2025-03-13 12:36:39,088 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 12:36:39,095 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 12:36:57,329 [screensaver.py:close()] - Closing Screensaver
+2025-03-13 12:36:57,335 [screen.py:wake_screen()] - Screen wake up
+2025-03-13 13:31:52,488 [printer.py:change_state()] - Changing state from 'printing' to 'paused'
+2025-03-13 13:31:52,488 [printer.py:change_state()] - Adding callback for state: paused
+2025-03-13 13:31:52,504 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'paused'
+2025-03-13 13:31:52,678 [printer.py:change_state()] - Changing state from 'paused' to 'ready'
+2025-03-13 13:31:52,679 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-13 13:31:52,692 [job_status.py:set_state()] - Changing job_status state from 'paused' to 'cancelled'
+2025-03-13 13:32:08,400 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-13 13:32:08,400 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-13 13:32:08,406 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-13 13:32:08,587 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-13 13:32:08,827 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-13 13:32:08,838 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-13 13:32:08,848 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-13 13:32:08,917 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-13 13:32:08,937 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
