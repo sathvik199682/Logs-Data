@@ -421,3 +421,5 @@ moonraker.components.shell_command.ShellCommandError: Error running shell comman
 2025-03-13 08:32:22,099 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
 2025-03-13 08:32:22,652 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
 2025-03-13 08:32:22,655 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-13 09:44:17,396 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-13 09:44:34,851 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
