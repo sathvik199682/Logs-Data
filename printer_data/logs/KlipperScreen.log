@@ -20150,3 +20150,12 @@ print_sort_dir = date_desc
 2025-03-15 11:45:58,391 [menu.py:evaluate_enable()] - moonraker connected True
 2025-03-15 11:45:59,640 [screen.py:_menu_go_back()] - #### Menu go back
 2025-03-15 11:45:59,677 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-15 12:03:47,369 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-15 12:03:47,370 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-15 12:03:47,391 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'complete'
+2025-03-15 12:03:47,515 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-15 12:03:47,530 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-15 13:03:48,444 [screensaver.py:show()] - Showing Screensaver
+2025-03-15 13:03:48,496 [screensaver.py:show()] - Showing Screensaver
+2025-03-15 13:03:48,497 [screensaver.py:close()] - Closing Screensaver
+2025-03-15 13:03:48,499 [screen.py:wake_screen()] - Screen wake up

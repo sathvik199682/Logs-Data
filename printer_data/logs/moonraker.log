@@ -507,3 +507,20 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary0JWPMIZmNO4443
 2025-03-15 11:41:11,236 [job_state.py:_status_update()] - Job Started: 04_Cabel_Holder.gcode
 2025-03-15 11:53:55,328 [websockets.py:write_to_socket()] - Websocket closed while writing: 547690962800
 2025-03-15 11:54:00,253 [websockets.py:on_close()] - Websocket Closed: ID: 547690962800 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
+2025-03-15 12:01:01,224 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.49ms
+2025-03-15 12:01:01,226 [websockets.py:open()] - Websocket Opened: ID: 547717438768, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 12:01:01,257 [websockets.py:_handle_identify()] - Websocket 547717438768 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 12:42:50,925 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-15 13:02:50,928 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-15 13:03:31,385 [websockets.py:on_close()] - Websocket Closed: ID: 547717438768 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.12
+2025-03-15 13:38:14,874 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-15 13:38:14,878 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.56ms
+2025-03-15 13:38:14,879 [websockets.py:open()] - Websocket Opened: ID: 547717438480, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 13:38:15,073 [websockets.py:_handle_identify()] - Websocket 547717438480 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 13:39:37,835 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-15 13:40:05,055 [websockets.py:write_to_socket()] - Websocket closed while writing: 547717438480
+2025-03-15 13:40:07,917 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-15 13:40:07,922 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2025-03-15 13:40:09,883 [websockets.py:on_close()] - Websocket Closed: ID: 547717438480 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.98
+2025-03-15 13:40:17,912 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.117
+2025-03-15 13:40:17,917 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.1.117
