@@ -484,3 +484,26 @@ Klipper Version: v0.12.0-85-gd785b396a-dirty
 2025-03-15 09:55:43,213 [websockets.py:_handle_identify()] - Websocket 547717437952 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
 2025-03-15 09:56:13,224 [websockets.py:write_to_socket()] - Websocket closed while writing: 547717437952
 2025-03-15 09:56:18,130 [websockets.py:on_close()] - Websocket Closed: ID: 547717437952 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.95
+2025-03-15 10:08:24,257 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-15 10:08:31,087 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-15 10:08:32,026 [job_state.py:_status_update()] - Job Started: CFFFP_beltfixture.gcode
+2025-03-15 10:09:38,304 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-15 10:35:24,326 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-15 10:57:50,902 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-15 11:12:50,905 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-15 11:31:45,243 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-15 11:31:45,248 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 9.88ms
+2025-03-15 11:31:45,250 [websockets.py:open()] - Websocket Opened: ID: 547690962800, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 11:31:45,268 [websockets.py:_handle_identify()] - Websocket 547690962800 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 11:32:11,934 [application.py:prepare()] - Upload Request Received from 192.168.1.105
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary0JWPMIZmNO4443x8
+2025-03-15 11:32:12,609 [application.py:post()] - Processing Uploaded File: 04_Cabel_Holder.gcode
+2025-03-15 11:32:13,268 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-15 11:32:13,414 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "04_Cabel_Holder.gcode") successfully finished
+2025-03-15 11:32:13,426 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.105) [_TRUSTED_USER_] 1494.75ms
+2025-03-15 11:41:09,791 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-15 11:41:09,818 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 30.36ms
+2025-03-15 11:41:11,236 [job_state.py:_status_update()] - Job Started: 04_Cabel_Holder.gcode
+2025-03-15 11:53:55,328 [websockets.py:write_to_socket()] - Websocket closed while writing: 547690962800
+2025-03-15 11:54:00,253 [websockets.py:on_close()] - Websocket Closed: ID: 547690962800 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.99
