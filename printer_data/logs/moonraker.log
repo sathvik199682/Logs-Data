@@ -450,3 +450,37 @@ Klipper Version: v0.12.0-85-gd785b396a-dirty
 2025-03-15 07:57:56,691 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
 2025-03-15 07:57:57,260 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
 2025-03-15 07:57:57,263 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:50,434 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:51,025 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:51,600 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:52,180 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:52,745 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:52,748 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:52,807 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:53,367 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:53,930 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:54,485 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:55,045 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:55,048 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:55,108 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:55,671 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:56,225 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:56,787 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:57,369 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 08:27:57,373 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-15 09:27:01,978 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-15 09:27:01,984 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 10.17ms
+2025-03-15 09:27:01,985 [websockets.py:open()] - Websocket Opened: ID: 547681493680, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 09:27:02,037 [websockets.py:_handle_identify()] - Websocket 547681493680 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 09:52:31,995 [websockets.py:write_to_socket()] - Websocket closed while writing: 547681493680
+2025-03-15 09:52:36,991 [websockets.py:on_close()] - Websocket Closed: ID: 547681493680 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2025-03-15 09:53:42,213 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 7.50ms
+2025-03-15 09:53:42,215 [websockets.py:open()] - Websocket Opened: ID: 547717438816, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 09:53:42,298 [websockets.py:_handle_identify()] - Websocket 547717438816 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 09:55:32,340 [websockets.py:write_to_socket()] - Websocket closed while writing: 547717438816
+2025-03-15 09:55:37,221 [websockets.py:on_close()] - Websocket Closed: ID: 547717438816 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.65
+2025-03-15 09:55:43,122 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 10.05ms
+2025-03-15 09:55:43,124 [websockets.py:open()] - Websocket Opened: ID: 547717437952, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-15 09:55:43,213 [websockets.py:_handle_identify()] - Websocket 547717437952 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-15 09:56:13,224 [websockets.py:write_to_socket()] - Websocket closed while writing: 547717437952
+2025-03-15 09:56:18,130 [websockets.py:on_close()] - Websocket Closed: ID: 547717437952 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.95
