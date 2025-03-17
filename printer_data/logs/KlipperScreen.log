@@ -20964,3 +20964,126 @@ print_sort_dir = date_desc
 2025-03-17 15:05:23,562 [screen.py:_send_action()] - printer.gcode.script: {'script': 'M220 S100'}
 2025-03-17 15:05:27,822 [screen.py:_menu_go_back()] - #### Menu go back
 2025-03-17 15:05:27,855 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-17 16:05:28,307 [screensaver.py:show()] - Showing Screensaver
+2025-03-17 16:05:28,350 [screensaver.py:show()] - Showing Screensaver
+2025-03-17 16:05:28,350 [screensaver.py:close()] - Closing Screensaver
+2025-03-17 16:05:28,353 [screen.py:wake_screen()] - Screen wake up
+2025-03-17 16:28:32,145 [screensaver.py:close()] - Closing Screensaver
+2025-03-17 16:28:32,156 [screen.py:wake_screen()] - Screen wake up
+2025-03-17 17:03:07,488 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-17 17:03:19,960 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-17 17:03:19,960 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-17 17:03:19,979 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'complete'
+2025-03-17 17:03:20,034 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-17 17:03:20,048 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-17 17:34:03,041 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-17 17:34:03,042 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-17 17:34:03,047 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-17 17:34:03,161 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-17 17:34:03,370 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-17 17:34:03,381 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-17 17:34:03,392 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-17 17:34:03,459 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-17 17:34:03,478 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-17 17:34:05,921 [screen.py:show_panel()] - Reinitializing panel move
+2025-03-17 17:34:06,040 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move
+2025-03-17 17:34:08,927 [screen.py:show_panel()] - Reinitializing panel menu
+2025-03-17 17:34:09,113 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move > menu
+2025-03-17 17:34:09,146 [menu.py:arrangeMenuItems()] - X > homing quad_gantry_level
+2025-03-17 17:34:09,862 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G28'}
+2025-03-17 17:34:55,142 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:34:55,176 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > move
+2025-03-17 17:34:57,423 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G91\nG0 z+25 F600'}
+2025-03-17 17:34:57,427 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: G90
+2025-03-17 17:35:23,560 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G91\nG0 z+25 F600'}
+2025-03-17 17:35:23,564 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: G90
+2025-03-17 17:36:55,919 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:36:55,954 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-17 17:37:04,373 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-17 17:37:04,389 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x11b208a0' has no handler with id '7883'
+  self.long_press = {}
+
+2025-03-17 17:37:04,391 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x11b20c60' has no handler with id '7910'
+  self.long_press = {}
+
+2025-03-17 17:37:04,405 [temperature.py:add_device()] - Adding device: extruder
+2025-03-17 17:37:04,415 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-17 17:37:04,468 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-17 17:37:04,473 [temperature.py:select_heater()] - Selecting extruder
+2025-03-17 17:37:04,474 [temperature.py:select_heater()] - Selecting heater_bed
+2025-03-17 17:37:05,863 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-17 17:37:05,863 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-17 17:37:05,863 [temperature.py:set_temperature()] - name match extruder
+2025-03-17 17:37:05,864 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S210.0
+2025-03-17 17:37:05,865 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-17 17:37:05,865 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-17 17:37:05,865 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S60.0
+2025-03-17 17:38:14,302 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:38:14,333 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-17 17:38:30,916 [screen.py:show_panel()] - Reinitializing panel extrude
+2025-03-17 17:38:31,021 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > extrude
+2025-03-17 17:38:31,023 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: SET_FILAMENT_SENSOR SENSOR=encoder_sensor ENABLE=1
+2025-03-17 17:38:32,546 [extrude.py:change_distance()] - ### Distance 25
+2025-03-17 17:38:33,411 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:38:33,413 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:38:46,583 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:38:46,586 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:38:57,790 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:38:57,792 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:39:39,268 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:39:39,272 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:39:55,571 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:39:55,573 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:40:05,376 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:40:05,377 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:40:15,367 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-17 17:40:15,370 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+25 F120'}
+2025-03-17 17:40:38,408 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:40:38,440 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-17 17:40:39,866 [screen.py:show_panel()] - Reinitializing panel gcodes
+2025-03-17 17:40:39,896 [gcodes.py:__init__()] - Thumbsize: 122.66666666666666
+2025-03-17 17:40:39,910 [gcodes.py:__init__()] - thumbs
+2025-03-17 17:40:39,919 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-17 17:40:39,941 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-17 17:40:40,350 [gcodes.py:load_files()] - Loaded in 0.339 seconds
+2025-03-17 17:40:59,350 [KlippyGtk.py:Dialog()] - Showing dialog Print trial nylon-260-80_Stoper new 3.0.gcode (width=800, height=480)
+2025-03-17 17:41:00,604 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-17 17:41:00,604 [gcodes.py:confirm_print_response()] - Starting print: trial nylon-260-80_Stoper new 3.0.gcode
+2025-03-17 17:41:00,605 [KlippyWebsocket.py:print_start()] - Sending printer.print.start
+2025-03-17 17:41:00,712 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-17 17:41:00,713 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-17 17:41:00,745 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-17 17:41:00,760 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-17 17:41:00,772 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-17 17:41:00,869 [screen.py:show_panel()] - Reinitializing panel job_status
+2025-03-17 17:41:01,058 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-17 17:41:01,070 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-17 17:41:01,083 [job_status.py:update_filename()] - Updating filename to trial nylon-260-80_Stoper new 3.0.gcode
+2025-03-17 17:41:01,084 [job_status.py:_update_file_metadata()] - Update Metadata. File: trial nylon-260-80_Stoper new 3.0.gcode Size: 2396890
+2025-03-17 17:41:01,103 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-17 17:41:26,721 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-17 17:41:26,731 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x118396d0' has no handler with id '725083'
+  self.long_press = {}
+
+2025-03-17 17:41:26,732 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x11acffa0' has no handler with id '725110'
+  self.long_press = {}
+
+2025-03-17 17:41:26,745 [temperature.py:add_device()] - Adding device: extruder
+2025-03-17 17:41:26,754 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-17 17:41:26,812 [screen.py:attach_panel()] - Current panel hierarchy: job_status > temperature
+2025-03-17 17:41:26,815 [temperature.py:select_heater()] - Selecting extruder
+2025-03-17 17:41:30,378 [temperature.py:verify_max_temp()] - 60/130
+2025-03-17 17:41:30,379 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S60
+2025-03-17 17:41:34,113 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:41:34,191 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-17 17:43:18,482 [screen.py:attach_panel()] - Current panel hierarchy: job_status > temperature
+2025-03-17 17:43:24,287 [temperature.py:verify_max_temp()] - 200/300
+2025-03-17 17:43:24,288 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S200
+2025-03-17 17:43:31,421 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:43:31,514 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-17 17:43:48,380 [screen.py:attach_panel()] - Current panel hierarchy: job_status > temperature
+2025-03-17 17:43:55,291 [temperature.py:verify_max_temp()] - 200/300
+2025-03-17 17:43:55,292 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S200
+2025-03-17 17:43:56,634 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-17 17:43:56,712 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-17 17:44:07,561 [screen.py:show_popup_message()] - error: // Unknown command:"M205"

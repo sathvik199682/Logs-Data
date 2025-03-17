@@ -285,3 +285,40 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoxLJ2bk0WgyAAe
 2025-03-17 15:52:41,706 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.31ms
 2025-03-17 15:52:41,707 [websockets.py:open()] - Websocket Opened: ID: 547681355184, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
 2025-03-17 15:52:41,984 [websockets.py:_handle_identify()] - Websocket 547681355184 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 16:01:11,790 [websockets.py:write_to_socket()] - Websocket closed while writing: 547681355184
+2025-03-17 16:01:16,712 [websockets.py:on_close()] - Websocket Closed: ID: 547681355184 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.28
+2025-03-17 16:02:23,310 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.26ms
+2025-03-17 16:02:23,311 [websockets.py:open()] - Websocket Opened: ID: 547681354368, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 16:02:23,369 [websockets.py:_handle_identify()] - Websocket 547681354368 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 16:56:58,197 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:56:58,775 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:56:59,357 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:56:59,941 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:00,506 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:00,510 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:00,567 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:01,131 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:01,699 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:02,257 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:02,809 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:02,811 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:02,871 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:03,455 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:04,015 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:04,590 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:05,140 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 16:57:05,145 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-17 17:06:58,135 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-17 17:10:29,031 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-17 17:10:29,031 [application.py:prepare()] - Upload Request Received from 192.168.1.105
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySmJ9c7vBFhFs0Hzp
+2025-03-17 17:10:31,590 [application.py:post()] - Processing Uploaded File: 1Speed_current_test.gcode
+2025-03-17 17:10:32,224 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-17 17:10:32,478 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "1Speed_current_test.gcode") successfully finished
+2025-03-17 17:10:32,489 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.105) [_TRUSTED_USER_] 3461.26ms
+2025-03-17 17:34:03,047 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-17 17:37:42,210 [websockets.py:on_close()] - Websocket Closed: ID: 547681354368 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.88
+2025-03-17 17:40:59,277 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-17 17:41:00,706 [job_state.py:_status_update()] - Job Started: trial nylon-260-80_Stoper new 3.0.gcode
+2025-03-17 17:42:30,384 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
