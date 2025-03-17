@@ -1,4 +1,4 @@
--------------------- Log Start | Mon Mar 17 08:57:00 2025 --------------------
+-------------------- Log Start | Mon Mar 17 19:56:58 2025 --------------------
 data_path: /home/om/printer_data
 is_default_data_path: False
 config_file: /home/om/printer_data/config/moonraker.conf
@@ -148,8 +148,8 @@ unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['system.slice', '-.mount', 'sysinit.target']
-**After=['systemd-journald.socket', '-.mount', 'basic.target', 'system.slice', 'network-online.target', 'klipper-mcu.service', 'sysinit.target']
+**Requires=['-.mount', 'system.slice', 'sysinit.target']
+**After=['sysinit.target', 'basic.target', 'system.slice', 'network-online.target', 'systemd-journald.socket', '-.mount', 'klipper-mcu.service']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
 **ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
@@ -162,173 +162,40 @@ Git Repo moonraker: Warnings detected:
   Repo has untracked source files: ['moonraker/components/timelapse.py']
 Git Repo klipper: Warnings detected:
   Repo has untracked source files: ['klippy/extras/gcode_shell_command.py']
-2025-03-17 14:26:59,615 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
-Owner: Arksine
-Repository Name: moonraker
-Path: /home/om/moonraker
-Remote: origin
-Branch: master
-Remote URL: https://github.com/Arksine/moonraker.git
-Recovery URL: https://github.com/Arksine/moonraker.git
-Current Commit SHA: a23187b4afa632da8a90cb9eae83f0f6a5eec903
-Upstream Commit SHA: 4eb23ef2817dc56e9a8a2bf81e1a011ee27888e3
-Current Version: v0.8.0-268-ga23187b4
-Upstream Version: v0.9.3-67-g4eb23ef2
-Rollback Commit: a23187b4afa632da8a90cb9eae83f0f6a5eec903
-Rollback Branch: master
-Rollback Version: v0.8.0-268-ga23187b4
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 220
-Diverged: False
-Repo Warnings:
-  Repo has untracked source files: ['moonraker/components/timelapse.py']
-2025-03-17 14:26:59,658 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
-Owner: Klipper3d
-Repository Name: klipper
-Path: /home/om/klipper
-Remote: origin
-Branch: master
-Remote URL: https://github.com/Klipper3d/klipper.git
-Recovery URL: https://github.com/Klipper3d/klipper.git
-Current Commit SHA: d785b396a72b57c073ce5bdf7a9d5e9fe39fc914
-Upstream Commit SHA: 47aa28e5300d75764add52e34b23b1804147626c
-Current Version: v0.12.0-85-gd785b396
-Upstream Version: v0.12.0-457-g47aa28e5
-Rollback Commit: d785b396a72b57c073ce5bdf7a9d5e9fe39fc914
-Rollback Branch: master
-Rollback Version: v0.12.0-85-gd785b396
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 372
-Diverged: False
-Repo Warnings:
-  Repo has untracked source files: ['klippy/extras/gcode_shell_command.py']
-2025-03-17 14:26:59,663 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 1 Day, 23 Hours, 35 Minutes, 22 Seconds
-2025-03-17 14:26:59,663 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 1 Day, 23 Hours, 35 Minutes, 25 Seconds
-2025-03-17 14:26:59,664 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 1 Day, 23 Hours, 35 Minutes, 45 Seconds
-2025-03-17 14:26:59,664 [git_deploy.py:_check_repo_status()] - Git Repo klipper-backup: path '/home/om/klipper-backup' is not a valid git repo
-2025-03-17 14:26:59,665 [git_deploy.py:refresh_repo_state()] - Git Repo klipper-backup: Initialization failure
-Traceback (most recent call last):
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 365, in refresh_repo_state
-    self._verify_repo()
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 776, in _verify_repo
-    raise self.server.error(
-moonraker.utils.ServerError: Git Repo klipper-backup: repo not initialized
-2025-03-17 14:26:59,665 [git_deploy.py:refresh()] - Error Refreshing git state
-Traceback (most recent call last):
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 57, in refresh
-    await self._update_repo_state()
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 63, in _update_repo_state
-    await self.repo.refresh_repo_state(need_fetch=need_fetch)
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 365, in refresh_repo_state
-    self._verify_repo()
-  File "/home/om/moonraker/moonraker/components/update_manager/git_deploy.py", line 776, in _verify_repo
-    raise self.server.error(
-moonraker.utils.ServerError: Git Repo klipper-backup: repo not initialized
-2025-03-17 14:26:59,671 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/om/printer_data/comms/moonraker.sock'
-2025-03-17 14:26:59,673 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Go3D
-2025-03-17 14:26:59,675 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
-2025-03-17 14:26:59,929 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2025-03-17 14:27:00,562 [server.py:add_log_rollover_item()] - 
-Systemd unit klipper.service:
-unit_name: klipper.service
-is_default: True
-manager: systemd
-Properties:
-**Requires=['-.mount', 'system.slice', 'sysinit.target']
-**After=['sysinit.target', 'basic.target', 'system.slice', 'network-online.target', 'systemd-journald.socket', '-.mount', 'klipper-mcu.service']
-**SupplementaryGroups=[]
-**EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
-**ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
-**WorkingDirectory=/home/om/klipper
-**FragmentPath=/etc/systemd/system/klipper.service
-**Description=Klipper 3D Printer Firmware SV1
-**User=om
-2025-03-17 14:27:00,820 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-85-gd785b396a-dirty
-2025-03-17 14:27:00,864 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2025-03-17 14:27:00,867 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2025-03-17 14:27:01,116 [job_state.py:_handle_started()] - Job state initialized: standby
-2025-03-17 14:27:01,391 [klippy_connection.py:_check_ready()] - Klippy ready
-2025-03-17 14:27:01,868 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
-2025-03-17 14:27:10,201 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
-2025-03-17 14:27:10,237 [application.py:log_request()] - 101 GET /websocket?token= (127.0.0.1) [_TRUSTED_USER_] 4.68ms
-2025-03-17 14:27:10,241 [websockets.py:open()] - Websocket Opened: ID: 547682506256, Proxied: False, User Agent: , Host Name: 127.0.0.1
-2025-03-17 14:27:10,491 [websockets.py:_handle_identify()] - Websocket 547682506256 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
-2025-03-17 14:27:10,998 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
-2025-03-17 14:28:51,174 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Must home axis first: 0.000 0.000 25.000 [0.000]
-2025-03-17 14:36:36,757 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
-2025-03-17 14:36:36,760 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 5.62ms
-2025-03-17 14:36:36,761 [websockets.py:open()] - Websocket Opened: ID: 547681671392, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 14:36:36,772 [websockets.py:_handle_identify()] - Websocket 547681671392 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 14:36:58,704 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
-2025-03-17 14:36:58,710 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 12.14ms
-2025-03-17 14:36:58,712 [websockets.py:open()] - Websocket Opened: ID: 547681832528, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 14:36:58,735 [websockets.py:_handle_identify()] - Websocket 547681832528 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 14:37:01,408 [application.py:prepare()] - Upload Request Received from 192.168.1.115
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoxLJ2bk0WgyAAe5S
-2025-03-17 14:37:02,487 [application.py:post()] - Processing Uploaded File: 0.6_skr_motherboardmount.gcode
-2025-03-17 14:37:03,152 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
-
-2025-03-17 14:37:03,396 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "0.6_skr_motherboardmount.gcode") successfully finished
-2025-03-17 14:37:03,407 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 2005.12ms
-2025-03-17 14:37:42,129 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 23.88ms
-2025-03-17 14:37:42,978 [job_state.py:_status_update()] - Job Started: 0.6_skr_motherboardmount.gcode
-2025-03-17 14:52:18,952 [websockets.py:on_close()] - Websocket Closed: ID: 547681671392 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.19
-2025-03-17 15:06:49,424 [websockets.py:on_close()] - Websocket Closed: ID: 547681832528 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.64
-2025-03-17 15:41:58,116 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
-2025-03-17 15:41:58,117 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
-2025-03-17 15:41:58,117 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
-2025-03-17 15:52:41,702 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
-2025-03-17 15:52:41,706 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.31ms
-2025-03-17 15:52:41,707 [websockets.py:open()] - Websocket Opened: ID: 547681355184, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 15:52:41,984 [websockets.py:_handle_identify()] - Websocket 547681355184 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 16:01:11,790 [websockets.py:write_to_socket()] - Websocket closed while writing: 547681355184
-2025-03-17 16:01:16,712 [websockets.py:on_close()] - Websocket Closed: ID: 547681355184 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.28
-2025-03-17 16:02:23,310 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.26ms
-2025-03-17 16:02:23,311 [websockets.py:open()] - Websocket Opened: ID: 547681354368, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 16:02:23,369 [websockets.py:_handle_identify()] - Websocket 547681354368 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 16:56:58,197 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:56:58,775 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:56:59,357 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:56:59,941 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:00,506 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:00,510 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:00,567 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:01,131 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:01,699 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:02,257 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:02,809 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:02,811 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:02,871 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:03,455 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:04,015 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:04,590 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:05,140 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 16:57:05,145 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
-2025-03-17 17:06:58,135 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
-2025-03-17 17:10:29,031 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
-2025-03-17 17:10:29,031 [application.py:prepare()] - Upload Request Received from 192.168.1.105
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySmJ9c7vBFhFs0Hzp
-2025-03-17 17:10:31,590 [application.py:post()] - Processing Uploaded File: 1Speed_current_test.gcode
-2025-03-17 17:10:32,224 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
-
-2025-03-17 17:10:32,478 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "1Speed_current_test.gcode") successfully finished
-2025-03-17 17:10:32,489 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.105) [_TRUSTED_USER_] 3461.26ms
-2025-03-17 17:34:03,047 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
-2025-03-17 17:37:42,210 [websockets.py:on_close()] - Websocket Closed: ID: 547681354368 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.88
-2025-03-17 17:40:59,277 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
-2025-03-17 17:41:00,706 [job_state.py:_status_update()] - Job Started: trial nylon-260-80_Stoper new 3.0.gcode
-2025-03-17 17:42:30,384 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2025-03-17 18:01:07,296 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 4.53ms
-2025-03-17 18:01:07,297 [websockets.py:open()] - Websocket Opened: ID: 547681844384, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 18:01:07,381 [websockets.py:_handle_identify()] - Websocket 547681844384 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 18:38:19,526 [websockets.py:on_close()] - Websocket Closed: ID: 547681844384 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.09
-2025-03-17 18:38:29,743 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.41ms
-2025-03-17 18:38:29,745 [websockets.py:open()] - Websocket Opened: ID: 547681844096, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
-2025-03-17 18:38:29,760 [websockets.py:_handle_identify()] - Websocket 547681844096 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
-2025-03-17 18:38:32,736 [websockets.py:on_close()] - Websocket Closed: ID: 547681844096 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.00
-2025-03-17 18:41:58,178 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
-2025-03-17 19:41:58,193 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+Klipper Version: v0.12.0-85-gd785b396a-dirty
+2025-03-18 01:26:58,243 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:26:58,819 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:26:59,390 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:26:59,962 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:00,516 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:00,519 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:00,575 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:01,126 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:01,682 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:02,231 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:02,782 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:02,786 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:02,835 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:03,386 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:03,942 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:04,527 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:05,107 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:27:05,112 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:56:58,247 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:56:58,802 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:56:59,358 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:56:59,905 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:00,454 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:00,458 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:00,512 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:01,070 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:01,626 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:02,174 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:02,728 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:02,731 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:02,778 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:03,364 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:03,935 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:04,508 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:05,081 [iostream.py:_do_ssl_handshake()] - SSL Error on 16 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-18 01:57:05,085 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
