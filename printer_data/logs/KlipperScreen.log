@@ -21087,3 +21087,15 @@ print_sort_dir = date_desc
 2025-03-17 17:43:56,634 [screen.py:_menu_go_back()] - #### Menu go back
 2025-03-17 17:43:56,712 [screen.py:attach_panel()] - Current panel hierarchy: job_status
 2025-03-17 17:44:07,561 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-17 18:43:57,329 [screensaver.py:show()] - Showing Screensaver
+2025-03-17 18:43:57,366 [screensaver.py:show()] - Showing Screensaver
+2025-03-17 18:43:57,366 [screensaver.py:close()] - Closing Screensaver
+2025-03-17 18:43:57,369 [screen.py:wake_screen()] - Screen wake up
+2025-03-17 19:16:18,275 [screensaver.py:close()] - Closing Screensaver
+2025-03-17 19:16:18,283 [screen.py:wake_screen()] - Screen wake up
+2025-03-17 19:16:18,329 [screen.py:show_popup_message()] - error: // Unknown command:"M205"
+2025-03-17 19:16:30,852 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-17 19:16:30,852 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-17 19:16:30,873 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'complete'
+2025-03-17 19:16:30,923 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-17 19:16:30,938 [screen.py:set_screenblanking_timeout()] - Using DPMS

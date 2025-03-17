@@ -322,3 +322,13 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySmJ9c7vBFhFs0H
 2025-03-17 17:40:59,277 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
 2025-03-17 17:41:00,706 [job_state.py:_status_update()] - Job Started: trial nylon-260-80_Stoper new 3.0.gcode
 2025-03-17 17:42:30,384 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-17 18:01:07,296 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 4.53ms
+2025-03-17 18:01:07,297 [websockets.py:open()] - Websocket Opened: ID: 547681844384, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 18:01:07,381 [websockets.py:_handle_identify()] - Websocket 547681844384 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 18:38:19,526 [websockets.py:on_close()] - Websocket Closed: ID: 547681844384 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.09
+2025-03-17 18:38:29,743 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.41ms
+2025-03-17 18:38:29,745 [websockets.py:open()] - Websocket Opened: ID: 547681844096, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 18:38:29,760 [websockets.py:_handle_identify()] - Websocket 547681844096 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 18:38:32,736 [websockets.py:on_close()] - Websocket Closed: ID: 547681844096 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.00
+2025-03-17 18:41:58,178 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-17 19:41:58,193 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
