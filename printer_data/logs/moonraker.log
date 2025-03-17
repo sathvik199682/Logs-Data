@@ -253,3 +253,35 @@ Properties:
 2025-03-17 14:27:01,116 [job_state.py:_handle_started()] - Job state initialized: standby
 2025-03-17 14:27:01,391 [klippy_connection.py:_check_ready()] - Klippy ready
 2025-03-17 14:27:01,868 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-17 14:27:10,201 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-17 14:27:10,237 [application.py:log_request()] - 101 GET /websocket?token= (127.0.0.1) [_TRUSTED_USER_] 4.68ms
+2025-03-17 14:27:10,241 [websockets.py:open()] - Websocket Opened: ID: 547682506256, Proxied: False, User Agent: , Host Name: 127.0.0.1
+2025-03-17 14:27:10,491 [websockets.py:_handle_identify()] - Websocket 547682506256 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
+2025-03-17 14:27:10,998 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-17 14:28:51,174 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Must home axis first: 0.000 0.000 25.000 [0.000]
+2025-03-17 14:36:36,757 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.115
+2025-03-17 14:36:36,760 [application.py:log_request()] - 101 GET /websocket (192.168.1.115) [_TRUSTED_USER_] 5.62ms
+2025-03-17 14:36:36,761 [websockets.py:open()] - Websocket Opened: ID: 547681671392, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 14:36:36,772 [websockets.py:_handle_identify()] - Websocket 547681671392 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 14:36:58,704 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-17 14:36:58,710 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 12.14ms
+2025-03-17 14:36:58,712 [websockets.py:open()] - Websocket Opened: ID: 547681832528, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 14:36:58,735 [websockets.py:_handle_identify()] - Websocket 547681832528 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-17 14:37:01,408 [application.py:prepare()] - Upload Request Received from 192.168.1.115
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoxLJ2bk0WgyAAe5S
+2025-03-17 14:37:02,487 [application.py:post()] - Processing Uploaded File: 0.6_skr_motherboardmount.gcode
+2025-03-17 14:37:03,152 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-17 14:37:03,396 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "0.6_skr_motherboardmount.gcode") successfully finished
+2025-03-17 14:37:03,407 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.115) [_TRUSTED_USER_] 2005.12ms
+2025-03-17 14:37:42,129 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 23.88ms
+2025-03-17 14:37:42,978 [job_state.py:_status_update()] - Job Started: 0.6_skr_motherboardmount.gcode
+2025-03-17 14:52:18,952 [websockets.py:on_close()] - Websocket Closed: ID: 547681671392 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.19
+2025-03-17 15:06:49,424 [websockets.py:on_close()] - Websocket Closed: ID: 547681832528 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.64
+2025-03-17 15:41:58,116 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-17 15:41:58,117 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.115
+2025-03-17 15:41:58,117 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-17 15:52:41,702 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-17 15:52:41,706 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.31ms
+2025-03-17 15:52:41,707 [websockets.py:open()] - Websocket Opened: ID: 547681355184, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36, Host Name: 192.168.1.117
+2025-03-17 15:52:41,984 [websockets.py:_handle_identify()] - Websocket 547681355184 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
