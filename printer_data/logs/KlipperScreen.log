@@ -21142,3 +21142,25 @@ print_sort_dir = date_desc
 2025-03-18 09:16:44,308 [screensaver.py:show()] - Showing Screensaver
 2025-03-18 09:16:44,308 [screensaver.py:close()] - Closing Screensaver
 2025-03-18 09:16:44,316 [screen.py:wake_screen()] - Screen wake up
+2025-03-18 10:16:45,309 [screensaver.py:show()] - Showing Screensaver
+2025-03-18 10:16:45,309 [screensaver.py:close()] - Closing Screensaver
+2025-03-18 10:16:45,317 [screen.py:wake_screen()] - Screen wake up
+2025-03-18 11:16:46,308 [screensaver.py:show()] - Showing Screensaver
+2025-03-18 11:16:46,309 [screensaver.py:close()] - Closing Screensaver
+2025-03-18 11:16:46,317 [screen.py:wake_screen()] - Screen wake up
+2025-03-18 11:32:43,046 [screensaver.py:close()] - Closing Screensaver
+2025-03-18 11:32:43,057 [screen.py:wake_screen()] - Screen wake up
+2025-03-18 11:32:43,122 [screen.py:show_popup_message()] - echo: Speed: 16000
+2025-03-18 11:32:48,284 [screen.py:show_popup_message()] - echo: Speed: 18000
+2025-03-18 11:32:54,366 [screen.py:show_popup_message()] - echo: Speed: 20000
+2025-03-18 11:33:44,715 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-18 11:33:44,716 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-18 11:33:44,720 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-18 11:33:44,837 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-18 11:33:45,071 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-18 11:33:45,082 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-18 11:33:45,093 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-18 11:33:45,166 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-18 11:33:45,188 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-18 11:34:06,462 [screen.py:show_popup_message()] - echo: Speed: 16000
+2025-03-18 11:34:11,015 [screen.py:show_popup_message()] - echo: Speed: 18000

@@ -64732,3 +64732,21 @@
 [03/15/25 16:33:30] crowsnest: V4L2 Control: No parameters set for [cam 1]. Skipped.
 [03/17/25 14:27:00] crowsnest: Starting ustreamer with Device /dev/video0 ...
 [03/17/25 14:27:02] crowsnest:  ... Done!
+[03/18/25 11:17:21] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[03/18/25 11:17:22] crowsnest: Version: v4.1.3-1-gc0c9c41
+[03/18/25 11:17:22] crowsnest: Prepare Startup ...
+[03/18/25 11:17:22] crowsnest: INFO: Host information:
+[03/18/25 11:17:22] crowsnest: Host Info: Distribution: Debian GNU/Linux 11 (bullseye)
+[03/18/25 11:17:22] crowsnest: Host Info: Release: MainsailOS release 1.3.2 (bullseye)
+[03/18/25 11:17:22] crowsnest: Host Info: Kernel: Linux 6.1.21-v8+ aarch64
+[03/18/25 11:17:22] crowsnest: Host Info: Model:  Raspberry Pi 3 Model B Plus Rev 1.4
+[03/18/25 11:17:22] crowsnest: Host Info: Available CPU Cores: 4
+[03/18/25 11:17:22] crowsnest: Host Info: Available Memory: 880328 kB
+[03/18/25 11:17:22] crowsnest: Host Info: Diskspace (avail. / total): 22G / 29G
+[03/18/25 11:17:22] crowsnest: INFO: Checking Dependencies
+[03/18/25 11:17:22] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[03/18/25 11:17:22] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[03/18/25 11:17:22] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[03/18/25 11:17:22] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/ustreamer.
+[03/18/25 11:17:22] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[03/18/25 11:17:23] crowsnest: Version Control: ustreamer is up to date. (v5.48)
