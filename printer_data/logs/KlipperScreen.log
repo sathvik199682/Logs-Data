@@ -21654,3 +21654,4 @@ print_sort_dir = date_desc
 2025-03-20 10:43:07,157 [main_menu.py:add_device()] - Adding device: heater_bed
 2025-03-20 10:43:07,225 [menu.py:arrangeMenuItems()] - X > gcodes
 2025-03-20 10:43:07,245 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-20 11:35:39,394 [screen.py:show_popup_message()] - echo: Pressed Power loss
