@@ -1327,3 +1327,38 @@ moonraker.utils.ServerError: Git Repo klipper-backup: No valid git remote detect
 2025-03-20 11:59:08,168 [websockets.py:open()] - Websocket Opened: ID: 548332879984, Proxied: False, User Agent: , Host Name: 127.0.0.1
 2025-03-20 11:59:08,407 [websockets.py:_handle_identify()] - Websocket 548332879984 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
 2025-03-20 11:59:09,011 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-20 12:08:26,151 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 28.76ms
+2025-03-20 12:08:27,364 [job_state.py:_status_update()] - Job Started: kinetic_fidget_1.gcode
+2025-03-20 12:40:47,946 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 12:40:57,961 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 12:46:08,361 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 12:46:18,381 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 13:00:45,167 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-20 13:09:03,216 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-20 13:36:59,082 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-20 13:36:59,089 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-20 13:37:59,092 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2025-03-20 13:38:59,095 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2025-03-20 13:39:59,097 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2025-03-20 13:40:59,100 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2025-03-20 13:41:48,119 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-20 13:41:49,384 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-20 13:41:52,066 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-20 13:41:52,069 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-20 13:41:52,317 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-20 13:41:52,588 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-20 13:41:52,602 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-20 13:41:53,074 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2025-03-20 13:41:53,704 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-20 13:46:07,736 [job_state.py:_status_update()] - Job Started: kinetic_fidget_1.gcode
+2025-03-20 13:53:59,837 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-20 13:53:59,842 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 8.52ms
+2025-03-20 13:53:59,843 [websockets.py:open()] - Websocket Opened: ID: 548296962496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 13:53:59,861 [websockets.py:_handle_identify()] - Websocket 548296962496 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 14:49:03,242 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-20 14:54:03,244 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-20 15:49:40,648 [websockets.py:on_close()] - Websocket Closed: ID: 548296962496 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.80
+2025-03-20 15:54:19,060 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-20 15:54:19,064 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.28ms
+2025-03-20 15:54:19,064 [websockets.py:open()] - Websocket Opened: ID: 548296479936, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 15:54:20,971 [websockets.py:_handle_identify()] - Websocket 548296479936 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
