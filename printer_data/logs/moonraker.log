@@ -171,3 +171,202 @@ Klipper Version: v0.12.0-85-gd785b396a-dirty
 2025-03-21 11:30:23,184 [websockets.py:open()] - Websocket Opened: ID: 547314944032, Proxied: False, User Agent: , Host Name: 127.0.0.1
 2025-03-21 11:30:23,439 [websockets.py:_handle_identify()] - Websocket 547314944032 Client Identified - Name: KlipperScreen, Version: v0.4.5-10-43ad9fc6-dirty, Type: display
 2025-03-21 11:30:23,914 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-21 12:25:46,329 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-21 12:25:46,335 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 11.96ms
+2025-03-21 12:25:46,337 [websockets.py:open()] - Websocket Opened: ID: 547288265632, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:25:46,355 [websockets.py:_handle_identify()] - Websocket 547288265632 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 12:25:52,848 [websockets.py:on_close()] - Websocket Closed: ID: 547288265632 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.52
+2025-03-21 12:25:52,934 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.48ms
+2025-03-21 12:25:52,935 [websockets.py:open()] - Websocket Opened: ID: 547315472800, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:25:52,951 [websockets.py:_handle_identify()] - Websocket 547315472800 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 12:26:37,827 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: '/home/om/printer_data/gcodes/Logs-21-03-2025_12-21-15'
+2025-03-21 12:26:37,839 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: 'moonraker.log'
+2025-03-21 12:26:37,848 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: 'moonraker.log'
+2025-03-21 12:26:37,858 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: 'moonraker.log'
+2025-03-21 12:26:37,867 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: 'moonraker.log'
+2025-03-21 12:26:42,583 [websockets.py:on_close()] - Websocket Closed: ID: 547315472800 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.63
+2025-03-21 12:26:42,671 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 7.55ms
+2025-03-21 12:26:42,672 [websockets.py:open()] - Websocket Opened: ID: 547288216576, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:26:42,698 [websockets.py:_handle_identify()] - Websocket 547288216576 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 12:27:00,413 [websockets.py:on_close()] - Websocket Closed: ID: 547288216576 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 7.73
+2025-03-21 12:27:00,716 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.24ms
+2025-03-21 12:27:00,718 [websockets.py:open()] - Websocket Opened: ID: 547288279120, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:27:00,738 [websockets.py:_handle_identify()] - Websocket 547288279120 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 12:27:09,084 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.delete_directory, Code: -31000, Message: [Errno 30] Read-only file system: '/home/om/printer_data/gcodes/Logs-21-03-2025_12-21-15'
+2025-03-21 12:28:38,821 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.move, Code: 400, Message: Cannot move a directory '/home/om/printer_data/gcodes/Logs-21-03-2025_11-46-19' into itself '/home/om/printer_data/gcodes/Logs-21-03-2025_11-46-19/Logs-21-03-2025_11-46-19'.
+2025-03-21 12:35:19,411 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-21 12:40:27,695 [websockets.py:on_close()] - Websocket Closed: ID: 547288279120 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.96
+2025-03-21 12:40:27,801 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 8.04ms
+2025-03-21 12:40:27,803 [websockets.py:open()] - Websocket Opened: ID: 547288266736, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:40:27,818 [websockets.py:_handle_identify()] - Websocket 547288266736 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 12:53:21,665 [websockets.py:on_close()] - Websocket Closed: ID: 547288266736 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.79
+2025-03-21 12:53:21,811 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.64ms
+2025-03-21 12:53:21,812 [websockets.py:open()] - Websocket Opened: ID: 547287380464, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 12:53:21,862 [websockets.py:_handle_identify()] - Websocket 547287380464 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 13:02:44,717 [websockets.py:on_close()] - Websocket Closed: ID: 547287380464 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 2.90
+2025-03-21 13:02:45,169 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 7.74ms
+2025-03-21 13:02:45,170 [websockets.py:open()] - Websocket Opened: ID: 547288265776, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 13:02:45,190 [websockets.py:_handle_identify()] - Websocket 547288265776 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 13:05:48,337 [websockets.py:on_close()] - Websocket Closed: ID: 547288265776 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.11
+2025-03-21 13:05:48,485 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.92ms
+2025-03-21 13:05:48,487 [websockets.py:open()] - Websocket Opened: ID: 547288194832, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-21 13:05:48,508 [websockets.py:_handle_identify()] - Websocket 547288194832 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-21 13:52:13,860 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <_04_Calibration_cube.gcode>
+2025-03-21 13:52:15,331 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <_04_Calibration_cube.gcode>
+2025-03-21 13:58:27,545 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-21 13:58:27,566 [application.py:log_request()] - 404 GET /server/history/job?uid=None (127.0.0.1) [_TRUSTED_USER_] 24.56ms
+2025-03-21 14:00:35,899 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <_04_Calibration_cube.gcode>
+2025-03-21 14:00:37,116 [job_state.py:_status_update()] - Job Started: _04_Calibration_cube.gcode
+2025-03-21 14:00:37,535 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <_04_Calibration_cube.gcode>
+2025-03-21 14:01:07,784 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-21 14:01:08,199 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.metadata, Code: -32601, Message: Metadata not available for <_04_Calibration_cube.gcode>
+2025-03-21 14:01:25,775 [job_state.py:_status_update()] - Job Started: 04_Cabel_Holder.gcode
+                                                                                           -------------------- Log Start | Fri Mar 21 08:16:40 2025 --------------------
+data_path: /home/om/printer_data
+is_default_data_path: False
+config_file: /home/om/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 3060fe1b3f574a95a5a343c6fc66396c
+unix_socket_path: /home/om/printer_data/comms/moonraker.sock
+software_version: v0.8.0-268-ga23187b
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/om/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+2025-03-21 13:46:40,357 [confighelper.py:read_file()] - Configuration File '/home/om/printer_data/config/moonraker.conf' parsed, total size: 2375 B
+2025-03-21 13:46:40,358 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = False
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[announcements]
+subscriptions = 
+	mainsail
+
+[update_manager klipper-backup]
+type = git_repo
+path = ~/klipper-backup
+origin = https://github.com/Staubgeborener/klipper-backup.git
+managed_services = moonraker
+primary_branch = main
+
+#################################################################
+All Configuration Files:
+/home/om/printer_data/config/moonraker.conf
+#################################################################
+2025-03-21 13:46:40,850 [server.py:load_component()] - Component (secrets) loaded
+2025-03-21 13:46:40,879 [server.py:load_component()] - Component (template) loaded
+2025-03-21 13:46:40,896 [server.py:load_component()] - Component (klippy_connection) loaded
+2025-03-21 13:46:45,057 [server.py:load_component()] - Component (application) loaded
+2025-03-21 13:46:45,233 [server.py:load_component()] - Component (websockets) loaded
+2025-03-21 13:46:45,841 [server.py:load_component()] - Component (dbus_manager) loaded
+2025-03-21 13:46:46,148 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 196
+2025-03-21 13:46:46,220 [server.py:load_component()] - Component (database) loaded
+2025-03-21 13:46:46,405 [file_manager.py:__init__()] - Using File System Observer: inotify
+2025-03-21 13:46:46,519 [server.py:load_component()] - Component (file_manager) loaded
+2025-03-21 13:46:46,572 [server.py:load_component()] - Component (klippy_apis) loaded
+2025-03-21 13:46:47,697 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: add5f1c6
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Plus Rev 1.4
+  total_memory: 880328
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SK32G
+  product_revision: 8.5
+  serial_number: 83e73685
+  manufacturer_date: 6/2024
+  capacity: 29.7 GiB
+  total_bytes: 31914983424
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+2025-03-21 13:46:47,712 [server.py:load_component()] - Component (shell_command) loaded
+2025-03-21 13:46:47,713 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-03-21 13:46:47,736 [server.py:load_component()] - Component (machine) loaded
+2025-03-21 13:46:47,756 [server.py:load_component()] - Component (data_store) loaded
+2025-03-21 13:46:47,811 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2025-03-21 13:46:47,818 [server.py:load_component()] - Component (proc_stats) loaded
+2025-03-21 13:46:47,825 [server.py:load_component()] - Component (job_state) loaded
+2025-03-21 13:46:47,841 [server.py:load_component()] - Component (job_queue) loaded
+2025-03-21 13:46:47,885 [server.py:load_component()] - Component (http_client) loaded

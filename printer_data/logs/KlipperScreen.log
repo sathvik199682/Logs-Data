@@ -22294,3 +22294,171 @@ print_sort_dir = date_desc
 2025-03-21 11:30:24,975 [printer.py:init_temp_store()] - Temp store: ['heater_bed', 'extruder']
 2025-03-21 11:30:25,003 [screen.py:init_tempstore()] - Temperature store size: 1200
 2025-03-21 11:31:23,355 [base_panel.py:battery_percentage()] - Battery information not available.
+2025-03-21 12:30:24,357 [screensaver.py:show()] - Showing Screensaver
+2025-03-21 12:30:24,391 [screensaver.py:show()] - Showing Screensaver
+2025-03-21 12:30:24,392 [screensaver.py:close()] - Closing Screensaver
+2025-03-21 12:30:24,394 [screen.py:wake_screen()] - Screen wake up
+2025-03-21 13:30:25,360 [screensaver.py:show()] - Showing Screensaver
+2025-03-21 13:30:25,360 [screensaver.py:close()] - Closing Screensaver
+2025-03-21 13:30:25,367 [screen.py:wake_screen()] - Screen wake up
+2025-03-21 13:48:24,838 [screensaver.py:close()] - Closing Screensaver
+2025-03-21 13:48:24,840 [screen.py:wake_screen()] - Screen wake up
+2025-03-21 13:48:27,671 [screen.py:_load_panel()] - Loading panel: gcodes
+2025-03-21 13:48:27,714 [gcodes.py:__init__()] - Thumbsize: 122.66666666666666
+2025-03-21 13:48:27,718 [gcodes.py:__init__()] - thumbs
+2025-03-21 13:48:27,730 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 13:48:27,759 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-21 13:48:28,307 [gcodes.py:load_files()] - Loaded in 0.371 seconds
+2025-03-21 13:48:34,717 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:48:34,759 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:48:47,304 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-21 13:48:49,666 [gcodes.py:_refresh_files()] - Refreshing
+2025-03-21 13:48:49,694 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 13:48:50,124 [gcodes.py:load_files()] - Loaded in 0.039 seconds
+2025-03-21 13:49:25,978 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:49:26,029 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:49:27,759 [screen.py:_load_panel()] - Loading panel: temperature
+2025-03-21 13:49:27,781 [temperature.py:add_device()] - Adding device: extruder
+2025-03-21 13:49:27,792 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-21 13:49:27,845 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-21 13:49:27,848 [temperature.py:select_heater()] - Selecting extruder
+2025-03-21 13:49:27,848 [temperature.py:select_heater()] - Selecting heater_bed
+2025-03-21 13:49:28,861 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-21 13:49:28,862 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-21 13:49:28,862 [temperature.py:set_temperature()] - name match extruder
+2025-03-21 13:49:28,862 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S210.0
+2025-03-21 13:49:28,865 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-21 13:49:28,865 [temperature.py:set_temperature()] - {'bed': 60.0, 'extruder': 210.0}
+2025-03-21 13:49:28,866 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S60.0
+2025-03-21 13:49:31,435 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:49:31,508 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:49:49,259 [screen.py:_load_panel()] - Loading panel: extrude
+2025-03-21 13:49:49,399 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > extrude
+2025-03-21 13:49:49,402 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: SET_FILAMENT_SENSOR SENSOR=encoder_sensor ENABLE=1
+2025-03-21 13:51:44,427 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-21 13:51:44,430 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+10 F120'}
+2025-03-21 13:51:49,309 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-21 13:51:49,311 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+10 F120'}
+2025-03-21 13:51:54,018 [extrude.py:change_distance()] - ### Distance 15
+2025-03-21 13:52:05,011 [KlippyWebsocket.py:gcode_script()] - Sending printer.gcode.script: M83
+2025-03-21 13:52:05,014 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G1 E+15 F120'}
+2025-03-21 13:52:11,456 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:52:11,516 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:52:12,611 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-21 13:52:13,856 [files.py:get_file_info()] - Metadata not found _04_Calibration_cube.gcode
+2025-03-21 13:52:13,935 [KlippyGtk.py:Dialog()] - Showing dialog Print _04_Calibration_cube.gcode (width=800, height=480)
+2025-03-21 13:52:13,936 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <_04_Calibration_cube.gcode>'}
+2025-03-21 13:52:15,177 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-21 13:52:15,177 [gcodes.py:confirm_print_response()] - Starting print: _04_Calibration_cube.gcode
+2025-03-21 13:52:15,178 [KlippyWebsocket.py:print_start()] - Sending printer.print.start
+2025-03-21 13:52:15,266 [screen.py:show_popup_message()] - error: Must home axis first: 8.922 23.354 0.033 [35.000]
+2025-03-21 13:52:20,421 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:52:20,454 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:52:22,083 [screen.py:_load_panel()] - Loading panel: home
+2025-03-21 13:52:22,150 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > home
+2025-03-21 13:52:23,441 [screen.py:_send_action()] - printer.gcode.script: {'script': 'G28'}
+2025-03-21 13:53:06,477 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 13:53:06,514 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 13:53:07,879 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-21 13:56:55,325 [gcodes.py:_refresh_files()] - Refreshing
+2025-03-21 13:56:55,333 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 13:56:55,410 [gcodes.py:load_files()] - Loaded in 0.040 seconds
+2025-03-21 13:57:02,561 [gcodes.py:_refresh_files()] - Refreshing
+2025-03-21 13:57:02,567 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 13:57:03,029 [gcodes.py:load_files()] - Loaded in 0.348 seconds
+2025-03-21 13:58:27,572 [KlippyRest.py:_do_request()] - 404 Client Error>>Invalid job uid>>None for url>>http://127.0.0.1:7125/server/history/job?uid=None
+2025-03-21 13:58:27,626 [KlippyGtk.py:Dialog()] - Showing dialog Print kinetic_fidget_2.gcode (width=800, height=480)
+2025-03-21 13:58:31,381 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-21 14:00:32,722 [gcodes.py:_refresh_files()] - Refreshing
+2025-03-21 14:00:32,750 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 14:00:33,184 [gcodes.py:load_files()] - Loaded in 0.041 seconds
+2025-03-21 14:00:35,894 [files.py:get_file_info()] - Metadata not found _04_Calibration_cube.gcode
+2025-03-21 14:00:35,938 [KlippyGtk.py:Dialog()] - Showing dialog Print _04_Calibration_cube.gcode (width=800, height=480)
+2025-03-21 14:00:35,940 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <_04_Calibration_cube.gcode>'}
+2025-03-21 14:00:36,911 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-21 14:00:36,912 [gcodes.py:confirm_print_response()] - Starting print: _04_Calibration_cube.gcode
+2025-03-21 14:00:36,912 [KlippyWebsocket.py:print_start()] - Sending printer.print.start
+2025-03-21 14:00:37,122 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-21 14:00:37,122 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-21 14:00:37,154 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-21 14:00:37,169 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-21 14:00:37,185 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-21 14:00:37,261 [screen.py:_load_panel()] - Loading panel: job_status
+2025-03-21 14:00:37,493 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-21 14:00:37,506 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-21 14:00:37,529 [job_status.py:update_filename()] - Updating filename to _04_Calibration_cube.gcode
+2025-03-21 14:00:37,530 [job_status.py:get_file_metadata()] - Cannot find file metadata. Listening for updated metadata
+2025-03-21 14:00:37,532 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-21 14:00:37,548 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <_04_Calibration_cube.gcode>'}
+2025-03-21 14:00:37,848 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-21 14:00:37,866 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x241c2f0' has no handler with id '16949'
+  self.long_press = {}
+
+2025-03-21 14:00:37,874 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x20b4760' has no handler with id '16976'
+  self.long_press = {}
+
+2025-03-21 14:00:37,893 [temperature.py:add_device()] - Adding device: extruder
+2025-03-21 14:00:37,903 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-21 14:00:37,964 [screen.py:attach_panel()] - Current panel hierarchy: job_status > temperature
+2025-03-21 14:00:37,967 [temperature.py:select_heater()] - Selecting extruder
+2025-03-21 14:00:37,982 [screen.py:show_popup_message()] - error: Temperature too low to extrude
+2025-03-21 14:00:37,993 [screen.py:show_popup_message()] - echo: "extruder" not hot enough
+2025-03-21 14:00:38,002 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-21 14:00:38,002 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-21 14:00:38,233 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-21 14:00:38,246 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-21 14:01:05,137 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-21 14:01:05,175 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-21 14:01:05,191 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'cancelled'
+2025-03-21 14:01:07,777 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-21 14:01:07,777 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-21 14:01:07,782 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-21 14:01:07,866 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-21 14:01:08,071 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-21 14:01:08,083 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-21 14:01:08,093 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-21 14:01:08,159 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-21 14:01:08,177 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-21 14:01:08,297 [files.py:_callback()] - {'code': -32601, 'message': 'Metadata not available for <_04_Calibration_cube.gcode>'}
+2025-03-21 14:01:19,211 [screen.py:show_panel()] - Reinitializing panel gcodes
+2025-03-21 14:01:19,245 [gcodes.py:__init__()] - Thumbsize: 122.66666666666666
+2025-03-21 14:01:19,255 [gcodes.py:__init__()] - thumbs
+2025-03-21 14:01:19,264 [KlippyWebsocket.py:get_dir_info()] - Sending server.files.get_directory  gcodes
+2025-03-21 14:01:19,286 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > gcodes
+2025-03-21 14:01:19,723 [gcodes.py:load_files()] - Loaded in 0.353 seconds
+2025-03-21 14:01:24,715 [KlippyGtk.py:Dialog()] - Showing dialog Print 04_Cabel_Holder.gcode (width=800, height=480)
+2025-03-21 14:01:25,542 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-21 14:01:25,543 [gcodes.py:confirm_print_response()] - Starting print: 04_Cabel_Holder.gcode
+2025-03-21 14:01:25,543 [KlippyWebsocket.py:print_start()] - Sending printer.print.start
+2025-03-21 14:01:25,780 [printer.py:change_state()] - Changing state from 'ready' to 'printing'
+2025-03-21 14:01:25,780 [printer.py:change_state()] - Adding callback for state: printing
+2025-03-21 14:01:25,823 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-21 14:01:25,840 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-21 14:01:25,856 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-21 14:01:25,956 [screen.py:show_panel()] - Reinitializing panel job_status
+2025-03-21 14:01:26,169 [screen.py:attach_panel()] - Current panel hierarchy: job_status
+2025-03-21 14:01:26,185 [job_status.py:set_state()] - Changing job_status state from 'standby' to 'printing'
+2025-03-21 14:01:26,206 [job_status.py:update_filename()] - Updating filename to 04_Cabel_Holder.gcode
+2025-03-21 14:01:26,207 [job_status.py:_update_file_metadata()] - Update Metadata. File: 04_Cabel_Holder.gcode Size: 290682
+2025-03-21 14:01:26,231 [job_status.py:show_file_thumbnail()] - no pixbuf
+2025-03-21 14:01:39,334 [KlippyGtk.py:Dialog()] - Showing dialog Cancel (width=800, height=480)
+2025-03-21 14:01:40,869 [KlippyGtk.py:remove_dialog()] - Removing Dialog
+2025-03-21 14:01:40,869 [job_status.py:cancel_confirm()] - Canceling print
+2025-03-21 14:01:40,873 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'cancelling'
+2025-03-21 14:01:40,879 [KlippyWebsocket.py:print_cancel()] - Sending printer.print.cancel
+2025-03-21 14:02:00,594 [screen.py:show_popup_message()] - echo: "extruder" not hot enough
+2025-03-21 14:02:00,879 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-21 14:02:00,879 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-21 14:02:00,899 [job_status.py:set_state()] - Changing job_status state from 'cancelling' to 'cancelled'
+2025-03-21 14:02:00,955 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-21 14:02:00,969 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-21 14:02:09,465 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-21 14:02:09,466 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-21 14:02:09,474 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-21 14:02:09,560 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-21 14:02:09,785 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-21 14:02:09,797 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-21 14:02:09,806 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-21 14:02:09,875 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-21 14:02:09,894 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+                                                                                    
