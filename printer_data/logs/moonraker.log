@@ -1362,3 +1362,277 @@ moonraker.utils.ServerError: Git Repo klipper-backup: No valid git remote detect
 2025-03-20 15:54:19,064 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.28ms
 2025-03-20 15:54:19,064 [websockets.py:open()] - Websocket Opened: ID: 548296479936, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
 2025-03-20 15:54:20,971 [websockets.py:_handle_identify()] - Websocket 548296479936 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 16:55:58,225 [file_manager.py:get_file_list()] - Updating File List <gcodes>...
+2025-03-20 16:59:03,270 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-20 16:59:03,300 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:03,854 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:04,406 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:04,961 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:05,516 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:05,519 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:05,573 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:06,131 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:06,686 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:07,247 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:07,802 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:07,806 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:07,860 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:08,413 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:08,984 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:09,544 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:10,097 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 16:59:10,100 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-20 17:03:55,002 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-20 17:03:55,003 [application.py:prepare()] - Upload Request Received from 192.168.1.105
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFLOsCGAtXznYChnb
+2025-03-20 17:03:56,352 [application.py:post()] - Processing Uploaded File: kinetic_fidget_2.gcode
+2025-03-20 17:03:57,085 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-20 17:03:57,329 [shell_command.py:_check_proc_success()] - Command (/home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/components/file_manager/metadata.py -p /home/om/printer_data/gcodes -f "kinetic_fidget_2.gcode") successfully finished
+2025-03-20 17:03:57,338 [application.py:log_request()] - 201 POST /server/files/upload (192.168.1.105) [_TRUSTED_USER_] 2342.60ms
+2025-03-20 17:15:24,264 [websockets.py:on_close()] - Websocket Closed: ID: 548296479936 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.19
+2025-03-20 17:22:44,444 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.88ms
+2025-03-20 17:22:44,446 [websockets.py:open()] - Websocket Opened: ID: 548297803376, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 17:22:45,465 [websockets.py:_handle_identify()] - Websocket 548297803376 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 17:22:48,829 [websockets.py:on_close()] - Websocket Closed: ID: 548297803376 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.39
+2025-03-20 17:27:19,403 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.22ms
+2025-03-20 17:27:19,404 [websockets.py:open()] - Websocket Opened: ID: 548297802032, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 17:27:19,434 [websockets.py:_handle_identify()] - Websocket 548297802032 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 17:31:14,860 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-20 17:34:36,049 [websockets.py:on_close()] - Websocket Closed: ID: 548297802032 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.63
+2025-03-20 17:34:36,239 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.00ms
+2025-03-20 17:34:36,240 [websockets.py:open()] - Websocket Opened: ID: 548297158768, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 17:34:36,247 [websockets.py:_handle_identify()] - Websocket 548297158768 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 17:35:04,198 [websockets.py:on_close()] - Websocket Closed: ID: 548297158768 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 7.95
+2025-03-20 17:35:04,277 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 5.01ms
+2025-03-20 17:35:04,278 [websockets.py:open()] - Websocket Opened: ID: 548297159488, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 17:35:04,286 [websockets.py:_handle_identify()] - Websocket 548297159488 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 17:35:59,277 [websockets.py:on_close()] - Websocket Closed: ID: 548297159488 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.94
+2025-03-20 17:38:55,208 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 7.79ms
+2025-03-20 17:38:55,210 [websockets.py:open()] - Websocket Opened: ID: 548297159632, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 17:38:55,385 [websockets.py:_handle_identify()] - Websocket 548297159632 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 17:54:13,696 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 17:54:23,712 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 18:35:27,224 [websockets.py:on_close()] - Websocket Closed: ID: 548297159632 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.96
+2025-03-20 18:35:37,977 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 4.55ms
+2025-03-20 18:35:37,978 [websockets.py:open()] - Websocket Opened: ID: 548297161168, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-20 18:35:37,988 [websockets.py:_handle_identify()] - Websocket 548297161168 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-20 18:35:41,070 [websockets.py:on_close()] - Websocket Closed: ID: 548297161168 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.10
+-------------------- Log Start | Thu Mar 20 12:47:22 2025 --------------------
+data_path: /home/om/printer_data
+is_default_data_path: False
+config_file: /home/om/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: True
+instance_uuid: 3060fe1b3f574a95a5a343c6fc66396c
+unix_socket_path: /home/om/printer_data/comms/moonraker.sock
+software_version: v0.8.0-268-ga23187b
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: []
+unofficial_components: []
+log_file: /home/om/printer_data/logs/moonraker.log
+python_version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+launch_args: /home/om/moonraker-env/bin/python /home/om/moonraker/moonraker/__main__.py
+msgspec_enabled: False
+uvloop_enabled: False
+2025-03-20 18:17:22,922 [confighelper.py:read_file()] - Configuration File '/home/om/printer_data/config/moonraker.conf' parsed, total size: 2375 B
+2025-03-20 18:17:22,923 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = False
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[announcements]
+subscriptions = 
+	mainsail
+
+[update_manager klipper-backup]
+type = git_repo
+path = ~/klipper-backup
+origin = https://github.com/Staubgeborener/klipper-backup.git
+managed_services = moonraker
+primary_branch = main
+
+#################################################################
+All Configuration Files:
+/home/om/printer_data/config/moonraker.conf
+#################################################################
+2025-03-20 18:17:23,438 [server.py:load_component()] - Component (secrets) loaded
+2025-03-20 18:17:23,470 [server.py:load_component()] - Component (template) loaded
+2025-03-20 18:17:23,487 [server.py:load_component()] - Component (klippy_connection) loaded
+2025-03-20 18:17:26,194 [server.py:load_component()] - Component (application) loaded
+2025-03-20 18:17:26,358 [server.py:load_component()] - Component (websockets) loaded
+2025-03-20 18:17:26,804 [server.py:load_component()] - Component (dbus_manager) loaded
+2025-03-20 18:17:27,133 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 195
+2025-03-20 18:17:27,243 [server.py:load_component()] - Component (database) loaded
+2025-03-20 18:17:27,518 [file_manager.py:__init__()] - Using File System Observer: inotify
+2025-03-20 18:17:27,671 [server.py:load_component()] - Component (file_manager) loaded
+2025-03-20 18:17:27,692 [server.py:load_component()] - Component (klippy_apis) loaded
+2025-03-20 18:17:29,454 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 9, 2, 'final', 0)
+  version_string: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 64bit
+  processor: aarch64
+  cpu_desc: 
+  serial_number: add5f1c6
+  hardware_desc: BCM2835
+  model: Raspberry Pi 3 Model B Plus Rev 1.4
+  total_memory: 880328
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SK32G
+  product_revision: 8.5
+  serial_number: 83e73685
+  manufacturer_date: 6/2024
+  capacity: 29.7 GiB
+  total_bytes: 31914983424
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {'name': 'MainsailOS', 'version_id': '1.3.2', 'codename': 'bullseye', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+2025-03-20 18:17:29,493 [server.py:load_component()] - Component (shell_command) loaded
+2025-03-20 18:17:29,494 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2025-03-20 18:17:29,512 [server.py:load_component()] - Component (machine) loaded
+2025-03-20 18:17:29,528 [server.py:load_component()] - Component (data_store) loaded
+2025-03-20 18:17:29,583 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2025-03-20 18:17:29,586 [server.py:load_component()] - Component (proc_stats) loaded
+2025-03-20 18:17:29,592 [server.py:load_component()] - Component (job_state) loaded
+2025-03-20 18:17:29,607 [server.py:load_component()] - Component (job_queue) loaded
+2025-03-20 18:17:29,654 [server.py:load_component()] - Component (http_client) loaded
+2025-03-20 18:17:29,694 [server.py:load_component()] - Component (announcements) loaded
+2025-03-20 18:17:29,712 [server.py:load_component()] - Component (webcam) loaded
+2025-03-20 18:17:29,731 [server.py:load_component()] - Component (extensions) loaded
+2025-03-20 18:17:29,768 [server.py:load_component()] - Component (octoprint_compat) loaded
+2025-03-20 18:17:29,891 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+https://my\.mainsail\.xyz
+http://my\.mainsail\.xyz
+http://.*\.local
+http://.*\.lan
+2025-03-20 18:17:29,908 [server.py:load_component()] - Component (authorization) loaded
+2025-03-20 18:17:29,922 [server.py:load_component()] - Component (history) loaded
+2025-03-20 18:17:30,155 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/om/moonraker-env
+2025-03-20 18:17:30,169 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/om/klippy-env
+2025-03-20 18:17:30,194 [server.py:load_component()] - Component (update_manager) loaded
+2025-03-20 18:17:30,199 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-03-20 18:17:30,251 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-03-20 18:17:30,378 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-03-20 18:17:30,379 [machine.py:validation_init()] - Installation version in database up to date
+2025-03-20 18:17:34,295 [machine.py:check_virt_status()] - No Virtualization Detected
+2025-03-20 18:17:34,371 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-20 18:17:34,388 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.1.124
+2025-03-20 18:17:34,581 [server.py:add_log_rollover_item()] - 
+Systemd unit moonraker.service:
+unit_name: moonraker.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', 'system.slice', 'network-online.target']
+**After=['basic.target', 'sysinit.target', 'system.slice', 'klipper.service', 'systemd-journald.socket', 'network-online.target']
+**SupplementaryGroups=['moonraker-admin']
+**EnvironmentFiles=/home/om/printer_data/systemd/moonraker.env
+**ExecStart=/home/om/moonraker-env/bin/python $MOONRAKER_ARGS
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/moonraker.service
+**Description=API Server for Klipper SV1
+**User=om
+2025-03-20 18:17:34,581 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-03-20 18:17:34,582 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-03-20 18:17:34,588 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-03-20 18:17:34,589 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.1.124
+2025-03-20 18:17:34,592 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2025-03-20 18:17:34,597 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', 'system.slice', '-.mount']
+**After=['basic.target', '-.mount', 'sysinit.target', 'systemd-journald.socket', 'klipper-mcu.service', 'network-online.target', 'system.slice']
+**SupplementaryGroups=[]
+**EnvironmentFiles=/home/om/printer_data/systemd/klipper.env
+**ExecStart=/home/om/klippy-env/bin/python $KLIPPER_ARGS
+**WorkingDirectory=/home/om/klipper
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Klipper 3D Printer Firmware SV1
+**User=om
+2025-03-20 18:17:34,597 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-03-20 18:17:34,598 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2025-03-20 18:17:34,610 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2025-03-20 18:17:34,701 [server.py:add_log_rollover_item()] - CPU Throttled Flags: ['Previously Under-Volted', 'Previously Throttled']

@@ -22174,3 +22174,45 @@ print_sort_dir = date_desc
 2025-03-20 15:41:56,920 [screensaver.py:show()] - Showing Screensaver
 2025-03-20 15:41:56,921 [screensaver.py:close()] - Closing Screensaver
 2025-03-20 15:41:56,924 [screen.py:wake_screen()] - Screen wake up
+2025-03-20 16:40:30,680 [printer.py:change_state()] - Changing state from 'printing' to 'ready'
+2025-03-20 16:40:30,680 [printer.py:change_state()] - Adding callback for state: ready
+2025-03-20 16:40:30,698 [screensaver.py:close()] - Closing Screensaver
+2025-03-20 16:40:30,705 [screen.py:wake_screen()] - Screen wake up
+2025-03-20 16:40:30,743 [job_status.py:set_state()] - Changing job_status state from 'printing' to 'complete'
+2025-03-20 16:40:30,812 [screen.py:set_screenblanking_timeout()] - Changing screen blanking to: 3600
+2025-03-20 16:40:30,826 [screen.py:set_screenblanking_timeout()] - Using DPMS
+2025-03-20 16:55:58,221 [job_status.py:close_panel()] - Closing job_status panel
+2025-03-20 16:55:58,221 [KlippyWebsocket.py:get_file_list()] - Sending server.files.list
+2025-03-20 16:55:58,227 [screen.py:_remove_all_panels()] - Removing all panels
+2025-03-20 16:55:58,329 [screen.py:show_panel()] - Reinitializing panel main_menu
+2025-03-20 16:55:58,562 [main_menu.py:__init__()] - ### Making MainMenu
+2025-03-20 16:55:58,577 [main_menu.py:add_device()] - Adding device: extruder
+2025-03-20 16:55:58,587 [main_menu.py:add_device()] - Adding device: heater_bed
+2025-03-20 16:55:58,659 [menu.py:arrangeMenuItems()] - X > gcodes
+2025-03-20 16:55:58,680 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-20 16:56:19,008 [screen.py:show_panel()] - Reinitializing panel temperature
+2025-03-20 16:56:19,025 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x18860a50' has no handler with id '285402'
+  self.long_press = {}
+
+2025-03-20 16:56:19,027 [warnings.py:_showwarnmsg()] - /home/om/KlipperScreen/panels/temperature.py:24: Warning: ../../../gobject/gsignal.c:2732: instance '0x189d4770' has no handler with id '285429'
+  self.long_press = {}
+
+2025-03-20 16:56:19,049 [temperature.py:add_device()] - Adding device: extruder
+2025-03-20 16:56:19,064 [temperature.py:add_device()] - Adding device: heater_bed
+2025-03-20 16:56:19,118 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-20 16:56:19,121 [temperature.py:select_heater()] - Selecting extruder
+2025-03-20 16:56:19,121 [temperature.py:select_heater()] - Selecting heater_bed
+2025-03-20 16:56:25,235 [temperature.py:verify_max_temp()] - 200/300
+2025-03-20 16:56:25,236 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S200
+2025-03-20 16:56:26,662 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-20 16:56:26,735 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-20 16:59:19,205 [screen.py:attach_panel()] - Current panel hierarchy: main_menu > temperature
+2025-03-20 16:59:19,966 [KlippyWebsocket.py:set_tool_temp()] - Sending set_tool_temp: M104 T0 S0
+2025-03-20 16:59:19,968 [KlippyWebsocket.py:set_bed_temp()] - Sending set_bed_temp: M140 S0
+2025-03-20 16:59:20,902 [screen.py:_menu_go_back()] - #### Menu go back
+2025-03-20 16:59:20,939 [screen.py:attach_panel()] - Current panel hierarchy: main_menu
+2025-03-20 17:30:14,851 [screen.py:_send_action()] - printer.gcode.script: {'script': 'Z_TILT_ADJUST'}
+2025-03-20 18:30:29,880 [screensaver.py:show()] - Showing Screensaver
+2025-03-20 18:30:29,902 [screensaver.py:show()] - Showing Screensaver
+2025-03-20 18:30:29,903 [screensaver.py:close()] - Closing Screensaver
+2025-03-20 18:30:29,906 [screen.py:wake_screen()] - Screen wake up
