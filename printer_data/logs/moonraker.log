@@ -201,3 +201,26 @@ moonraker.utils.ServerError: Git Repo klipper-backup: No valid git remote detect
 2025-03-22 10:50:43,478 [websockets.py:_handle_identify()] - Websocket 548011857376 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
 2025-03-22 11:40:01,193 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
 2025-03-22 12:00:01,199 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-22 12:39:06,446 [websockets.py:on_close()] - Websocket Closed: ID: 548011857376 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.87
+2025-03-22 12:42:08,282 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-22 12:42:08,287 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 9.28ms
+2025-03-22 12:42:08,288 [websockets.py:open()] - Websocket Opened: ID: 548011774496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 12:42:08,475 [websockets.py:_handle_identify()] - Websocket 548011774496 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 13:10:55,631 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-22 13:11:05,643 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-22 13:12:14,345 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 6.30ms
+2025-03-22 13:12:14,346 [websockets.py:open()] - Websocket Opened: ID: 548011820464, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 13:12:14,729 [websockets.py:_handle_identify()] - Websocket 548011820464 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 13:12:38,460 [websockets.py:write_to_socket()] - Websocket closed while writing: 548011774496
+2025-03-22 13:12:43,293 [websockets.py:on_close()] - Websocket Closed: ID: 548011774496 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.83
+2025-03-22 13:16:30,281 [websockets.py:on_close()] - Websocket Closed: ID: 548011820464 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.86
+2025-03-22 13:52:03,177 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 10.79ms
+2025-03-22 13:52:03,180 [websockets.py:open()] - Websocket Opened: ID: 548011819312, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 13:52:03,586 [websockets.py:_handle_identify()] - Websocket 548011819312 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 14:09:41,254 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-22 14:09:51,259 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.1.124
+2025-03-22 14:33:34,863 [websockets.py:on_close()] - Websocket Closed: ID: 548011819312 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.30
+2025-03-22 14:44:52,031 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 7.43ms
+2025-03-22 14:44:52,032 [websockets.py:open()] - Websocket Opened: ID: 548011820128, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 14:44:52,050 [websockets.py:_handle_identify()] - Websocket 548011820128 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 15:45:01,281 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
