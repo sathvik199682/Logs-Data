@@ -224,3 +224,34 @@ moonraker.utils.ServerError: Git Repo klipper-backup: No valid git remote detect
 2025-03-22 14:44:52,032 [websockets.py:open()] - Websocket Opened: ID: 548011820128, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
 2025-03-22 14:44:52,050 [websockets.py:_handle_identify()] - Websocket 548011820128 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
 2025-03-22 15:45:01,281 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-22 17:05:01,300 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:01,891 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:02,475 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:03,047 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:03,615 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:03,619 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:03,675 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:04,234 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:04,807 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:05,362 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:05,926 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:05,929 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:05,999 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:06,556 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:07,126 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:07,723 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:08,302 [iostream.py:_do_ssl_handshake()] - SSL Error on 17 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:05:08,308 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'mainsail': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1123)
+2025-03-22 17:06:01,298 [websockets.py:on_close()] - Websocket Closed: ID: 548011820128 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.25
+2025-03-22 17:07:30,787 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-22 17:07:30,792 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 10.16ms
+2025-03-22 17:07:30,793 [websockets.py:open()] - Websocket Opened: ID: 548011823056, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 17:07:31,046 [websockets.py:_handle_identify()] - Websocket 548011823056 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 18:10:01,323 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
+2025-03-22 18:24:12,200 [websockets.py:on_close()] - Websocket Closed: ID: 548011823056 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.98
+2025-03-22 18:24:26,072 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.1.105
+2025-03-22 18:24:26,077 [application.py:log_request()] - 101 GET /websocket (192.168.1.105) [_TRUSTED_USER_] 9.42ms
+2025-03-22 18:24:26,078 [websockets.py:open()] - Websocket Opened: ID: 548011851152, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36, Host Name: 192.168.1.124
+2025-03-22 18:24:26,558 [websockets.py:_handle_identify()] - Websocket 548011851152 Client Identified - Name: mainsail, Version: 2.12.0, Type: web
+2025-03-22 18:24:28,657 [websockets.py:on_close()] - Websocket Closed: ID: 548011851152 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.59
+2025-03-22 19:25:01,353 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.1.105
